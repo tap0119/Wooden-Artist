@@ -15,12 +15,11 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // ------------------------------------------------------------------------------------------
-            // |  ESC  |  1   |  2   |  3   |  4   |  5   |   6   |  7    |  8   |  9   |   0   | BSPC  |
-            // |  TAB  |  Q   |  W   |  E   |  R   |  T   |   Y   |  U    |  I   |  O   |   P   |  \    |
-            // | SHIFT |  A   |  S   |  D   |  F   |  G   |   H   |  J    |  K   |  L   |   ;   |  '    |
-            // | CTRL  |  Z   |  X   |  C   |  V   |  B   |   N   |  M    |  ,   |  .   |   /   | ENTER |
-            // |ADJUST | LCTL | LALT | LGUI | LOWR | SPACE| SPACE |  RAIS | LARW | DARW | UARW  | RARW  |
+            // |  ESC  |  =   |  1   |  2   |  3   |  4   |  5   |   6   |  7    |  8  |  9    |   0   |    ;  | PrtSc      | Vol  |
+            // |  TAB     |  '   |  ,   |  .   |  p   |  y   |   /   |  f    |  g   |  c   |   r   |  l    |  -             | Vol  |
+            // | BackSp |  a   |  o   |  e   |  u   |  i   |     \     |  d    |  h   |  t   |   n   |  s    |  Shift |    Enter   |
+            // |LockT2| Shift |  q   |  j   |  k   |  x   |  [   |   ]   |  b    |  m   |  w   |   v  |  z     |    Up    |  BTNext|
+            // | Ctrl    | Win  |  Alt  |   Space           |   T2   |       T1       | Delete | Ctrl |  Left  |   Down   |  Right |
 
 
             bindings = <
