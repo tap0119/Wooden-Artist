@@ -1,6 +1,6 @@
 if SHIELD_CUSTOMTAP
 
 config ZMK_KEYBOARD_NAME
-    default "Wooden Blade"
+    default "The Ax Handle"
 
 endif
