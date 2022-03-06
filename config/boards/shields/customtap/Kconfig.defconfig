@@ -1,6 +1,6 @@
 if SHIELD_CUSTOMTAP
 
 config ZMK_KEYBOARD_NAME
-    default "Notepad65"
+    default "Wooden Artist"
 
 endif
