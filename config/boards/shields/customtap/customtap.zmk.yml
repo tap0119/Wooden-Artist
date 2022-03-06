@@ -1,0 +1,9 @@
+file_format: "1"
+id: customtap
+name: customtap
+type: shield
+url: https://github.com/tap0119/customtap/
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
