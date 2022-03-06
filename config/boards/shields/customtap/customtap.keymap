@@ -26,29 +26,21 @@
             key-positions = <46 49>;
             bindings = <&kp LC(Z)>;
         };
-        
-        compatible = "zmk,combos";
         combo_ctrlUP {
             timeout-ms = <50>;
             key-positions = <66 57>;
             bindings = <&kp LS(LC(T))>;
         };   
-        
-        compatible = "zmk,combos";
         combo_ctrlLEFT {
             timeout-ms = <50>;
             key-positions = <66 67>;
             bindings = <&kp LS(LC(TAB))>;
         };    
-        
-        compatible = "zmk,combos";
         combo_ctrlDOWN {
             timeout-ms = <50>;
             key-positions = <66 68>;
             bindings = <&kp LC(W)>;
         };
-        
-        compatible = "zmk,combos";
         combo_ctrlRIGHT {
             timeout-ms = <50>;
             key-positions = <66 69>;
