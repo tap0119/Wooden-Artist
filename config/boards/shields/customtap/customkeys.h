@@ -3,4 +3,4 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define
+#define M_UP MOVE(0,-600)
