@@ -1,2 +1,2 @@
-config SHIELD_CUSTOM70
+config SHIELD_CUSTOMTAP
     def_bool $(shields_list_contains,customtap)
