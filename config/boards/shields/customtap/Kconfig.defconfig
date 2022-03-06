@@ -1,6 +1,6 @@
 if SHIELD_CUSTOMTAP
 
 config ZMK_KEYBOARD_NAME
-    default "The Ax Handle"
+    default "Notepad65"
 
 endif
