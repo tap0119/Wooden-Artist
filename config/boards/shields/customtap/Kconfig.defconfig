@@ -1,6 +1,6 @@
 if SHIELD_CUSTOMTAP
 
 config ZMK_KEYBOARD_NAME
-    default "Custom70"
+    default "Wooden Blade"
 
 endif
