@@ -12,8 +12,6 @@
 
 #include <customkeys.h>
 
-#define M_UP MOVE(0,-600)
-
 #define DEFAULT 0
 #define NAV     1
 #define NAV2    2
