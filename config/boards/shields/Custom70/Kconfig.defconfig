@@ -1,6 +1,6 @@
 if SHIELD_MY_BOARD
 
 config ZMK_KEYBOARD_NAME
-    default "Custom 70"
+    default "Custom70"
 
 endif
