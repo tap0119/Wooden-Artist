@@ -17,6 +17,8 @@
         label = "KSCAN";
         diode-direction = "col2row";
 
+//https://zmk.dev/assets/images/pro-micro-pins-labelled-93aa2a889cc45ecddf0161a5fe734434.jpg
+
         col-gpios
             = <&pro_micro 9 GPIO_ACTIVE_HIGH> // col 0
             , <&pro_micro 8 GPIO_ACTIVE_HIGH> // col 1
