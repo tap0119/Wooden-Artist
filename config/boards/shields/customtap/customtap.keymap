@@ -6,10 +6,11 @@
 
 #define DEFAULT 0
 #define NAV     1
-#define MOUSE   2
-#define MOUSE2  3
-#define QWERTY  4
-#define COLEMAK 5
+#define NAV2    2
+#define MOUSE   3
+#define MOUSE2  4
+#define QWERTY  5
+#define COLEMAK 6
 
 //Mouse Movement
 #define MUP     MOVE(0,-600)
@@ -84,11 +85,27 @@
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
     &trans         &kp EXCL    &trans     &kp UP     &kp K_APP   &kp ESC    &trans    &kp DOLLAR &kp N7      &kp N8    &kp N9      &none       &kp QUESTION    &to COLEMAK    
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &trans       &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER       &trans      &kp MINUS    &kp N4     &kp N5      &kp N6    &none     &trans       &trans      
+    &trans       &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER       &trans      &kp MINUS    &kp N4     &kp N5      &kp N6   &mo NAV2   &trans       &trans      
 //├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &kp COLON  &kp DEL     &trans      &trans      &trans   &kp F21   &trans     &trans     &kp N0      &kp N1     &kp N2    &kp N3    &none      &kp PG_UP   &trans    
+    &kp COLON  &kp DEL     &trans      &trans      &trans   &kp F21   &trans     &trans     &kp N0      &kp N1     &kp N2    &kp N3    &none      &kp PG_UP    &trans    
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp F17        &trans      &tog 1        &trans                          &to NAV           &tog NAV            &to 0     &trans      &kp HOME   &kp PG_DN   &kp END 
+    &kp F17        &trans      &tog 1        &trans                          &to NAV           &tog NAV            &to 0     &trans      &kp HOME   &kp PG_DN  &kp END 
+//╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
+            >;
+        };
+        
+        NAV2 {
+           bindings = <
+//╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
+    &trans     &trans      &trans     &trans      &trans    &trans     &trans     &trans     &trans     &trans     &trans      &trans    &trans     &trans    &trans
+//├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
+    &trans          &trans     &trans     &kp CUP    &trans     &trans      &trans    &trans     &trans    &trans     &trans     &trans        &trans         &trans
+//├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
+    &trans       &kp CLEFT  &kp CLEFT  &kp CDOWN   &kp CRIGHT  &trans       &trans          &trans      &trans    &trans     &trans    &trans    &trans       &trans
+//├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
+    &none      &trans      &trans      &trans      &trans  &trans   &trans     &trans     &trans     &trans     &trans      &trans     &trans    &trans       &trans
+//├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
+    &trans        &trans      &trans         &trans                         &trans       &trans                 &to 0        &trans    &trans    &trans       &trans
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
