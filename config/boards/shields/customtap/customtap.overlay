@@ -30,7 +30,7 @@
             , <&pro_micro 4 GPIO_ACTIVE_HIGH> // col 8
             , <&pro_micro 1 GPIO_ACTIVE_HIGH>  // col 9
             , <&pro_micro 3 GPIO_ACTIVE_HIGH>  // col 10
-            , <&gpio1 1 GPIO_ACTIVE_HIGH> // col 11
+            , <&gpio1 2 GPIO_ACTIVE_HIGH> // col 11
             , <&pro_micro 2 GPIO_ACTIVE_HIGH> // col 12
             ;
 
