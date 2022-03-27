@@ -28,36 +28,36 @@
 #define CDOWN   LC(W)
 #define CRIGHT  LC(TAB)
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-        combo_ctrlZ {
-            timeout-ms = <50>;
-            key-positions = <45 48>;
-            bindings = <&kp LC(Z)>;
-        };
-        combo_ctrlUP {
-            timeout-ms = <50>;
-            key-positions = <65 56>;
-            bindings = <&kp CUP>;
-        };   
-        combo_ctrlLEFT {
-            timeout-ms = <50>;
-            key-positions = <65 66>;
-            bindings = <&kp CLEFT>;
-        };    
-        combo_ctrlDOWN {
-            timeout-ms = <50>;
-            key-positions = <65 67>;
-            bindings = <&kp CDOWN>;
-        };
-        combo_ctrlRIGHT {
-            timeout-ms = <50>;
-            key-positions = <65 68>;
-            bindings = <&kp CRIGHT>;
-        };
-    };
-};
+/// {
+//    combos {
+//        compatible = "zmk,combos";
+//        combo_ctrlZ {
+//            timeout-ms = <50>;
+//            key-positions = <45 48>;
+//            bindings = <&kp LC(Z)>;
+//        };
+//        combo_ctrlUP {
+//            timeout-ms = <50>;
+//            key-positions = <65 56>;
+//            bindings = <&kp CUP>;
+//        };   
+//        combo_ctrlLEFT {
+//            timeout-ms = <50>;
+//            key-positions = <65 66>;
+//            bindings = <&kp CLEFT>;
+//        };    
+//        combo_ctrlDOWN {
+//            timeout-ms = <50>;
+//            key-positions = <65 67>;
+//            bindings = <&kp CDOWN>;
+//        };
+//        combo_ctrlRIGHT {
+//            timeout-ms = <50>;
+//            key-positions = <65 68>;
+//            bindings = <&kp CRIGHT>;
+//        };
+//    };
+//};
 
 / {
     keymap {
@@ -65,7 +65,7 @@
         default_layer {
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-    &reset   &kp EQUAL    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0    &kp DEL  &kp PSCRN    &kp K_VOL_UP
+    &bootloader  &kp EQUAL    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0    &kp DEL  &kp PSCRN    &kp K_VOL_UP
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
     &kp TAB         &kp SQT   &kp COMMA   &kp DOT     &kp P      &kp Y     &kp FSLH    &kp F     &kp G      &kp C      &kp R      &kp L       &kp MINUS       &kp K_VOL_DN
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
@@ -73,7 +73,7 @@
 //├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
     &kp SEMI    &kp LSHIFT  &kp Q      &kp J     &kp K       &kp X     &kp LBKT   &kp RBKT   &kp B       &kp M     &kp W      &kp V      &kp Z      &kp UP     &kp TILDE
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE              &kp RBRC       &kp LBRC            &kp GT   &kp LT     &kp LEFT   &kp DOWN   &kp RIGHT
+    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE              &kp RBRC       &mo NAV            &kp GT   &kp LT     &kp LEFT   &kp DOWN   &kp RIGHT
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
