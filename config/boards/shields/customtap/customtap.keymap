@@ -57,8 +57,8 @@
 //            bindings = <&kp CRIGHT>;
 //       };
         combo_Search {
-            timeout-ms = <50>;
-            key-positions = <42 64>;
+            timeout-ms = <150>;
+            key-positions = <1 2>;
            bindings = <&kp F24>;
        };
     };
