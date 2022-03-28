@@ -117,7 +117,7 @@
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
     &trans          &trans     &trans   &kp LA(LS(UP)) &kp LA(LS(R)) &kp PG_UP &trans &trans     &kp AMPS  &kp STAR   &trans     &trans     &trans           &bt BT_CLR
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-  &trans   &kp LA(LS(LEFT)) &kp LA(LS(LEFT)) &kp LA(LS(DOWN)) &kp LA(LS(RIGHT)) &kp PG_DN &trans  &kp LPAR  &kp DOLLAR  &kp PRCNT  &kp CARET  &trans  &trans     &tras
+  &trans   &kp LA(LS(LEFT)) &kp LA(LS(LEFT)) &kp LA(LS(DOWN)) &kp LA(LS(RIGHT)) &kp PG_DN &trans  &kp LPAR  &kp DOLLAR  &kp PRCNT  &kp CARET  &trans  &trans     &trans
  //├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
     &none      &trans      &trans      &trans      &kp LA(LS(M)) &to 2   &trans     &trans     &kp RPAR  &kp EXCL  &kp AT        &kp HASH   &trans   &trans     &trans
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
