@@ -59,7 +59,7 @@
         combo_Search {
             timeout-ms = <150>;
             key-positions = <1 2>;
-           bindings = <&kp F24>;
+           bindings = <&kp A>;
        };
     };
 };
