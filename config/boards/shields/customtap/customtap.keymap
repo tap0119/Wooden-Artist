@@ -18,13 +18,13 @@
 //#define MDOWN   MOVE(0,600) 
 //#define MRIGHT  MOVE(600,0) 
 
-#define MUP       LS(F1)
-#define MDOWN     LS(F2)
-#define MLEFT     LS(F3)
-#define MRIGHT    LS(F4)
-#define LCLICK    LS(F5)
-#define RCLICK    LS(F6)
-#define MCLICK    LS(F7)
+#define MUP       LG(F1)
+#define MDOWN     LG(F2)
+#define MLEFT     LG(F3)
+#define MRIGHT    LG(F4)
+#define LCLICK    LG(F5)
+#define RCLICK    LG(F6)
+#define MCLICK    LG(F7)
 
 //Ctrl + Arrows
 #define CUP     LS(LC(T))
