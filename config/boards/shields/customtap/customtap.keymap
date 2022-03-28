@@ -115,13 +115,13 @@
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
    &bootloader &reset  &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans  &trans    &trans     &trans     &trans      &trans    &trans  &trans   &out OUT_TOG   
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-    &trans          &trans     &trans   &kp MUP     &kp RCLK  &kp SCROLL_UP &trans      &trans     &kp AMPS  &kp STAR   &trans     &trans     &trans          &bt BT_CLR
+    &trans          &trans     &trans   &kp LA(LS(UP)) &kp LA(LS(R)) &kp PG_UP &trans &trans     &kp AMPS  &kp STAR   &trans     &trans     &trans           &bt BT_CLR
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-  &trans         &kp MLEFT  &kp MLEFT  &kp MDOWN   &kp MRIGHT &kp SCROLL_DOWN &trans      &kp LPAR  &kp DOLLAR  &kp PRCNT  &kp CARET  &trans     &kp MCLK     &kp RCLK
-//├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &none      &trans      &trans      &trans      &kp MCLK  &to 2   &trans     &trans     &kp RPAR  &kp EXCL  &kp AT        &kp HASH   &kp LCLK   &kp MUP     &mo MOUSE2
+  &trans   &kp LA(LS(LEFT)) &kp LA(LS(LEFT)) &kp LA(LS(DOWN)) &kp LA(LS(RIGHT)) &kp PG_DOWN &trans  &kp LPAR  &kp DOLLAR  &kp PRCNT  &kp CARET  &trans  &trans     &tras
+ //├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
+    &none      &trans      &trans      &trans      &kp LA(LS(M)) &to 2   &trans     &trans     &kp RPAR  &kp EXCL  &kp AT        &kp HASH   &trans   &trans     &trans
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &trans        &trans      &trans         &kp LCLK                      &mo MOUSE2          &tog MOUSE        &to 0        &trans    &kp MLEFT  &kp MDOWN   &kp MRIGHT
+    &trans        &trans      &trans         &kp LA(LS(L))                      &trans    &trans               &to 0        &trans       &trans     &trans     &trans
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
                >;
         };
