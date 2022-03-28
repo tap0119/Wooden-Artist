@@ -58,8 +58,8 @@
 //       };
         combo_Search {
             timeout-ms = <150>;
-            key-positions = <1 2>;
-           bindings = <&kp A>;
+            key-positions = <41 63>;
+           bindings = <&kp LS(F12)>;
        };
     };
 };
