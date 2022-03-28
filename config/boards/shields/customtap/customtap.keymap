@@ -28,9 +28,9 @@
 #define CDOWN   LC(W)
 #define CRIGHT  LC(TAB)
 
-/// {
-//    combos {
-//        compatible = "zmk,combos";
+/ {
+    combos {
+       compatible = "zmk,combos";
 //        combo_ctrlZ {
 //            timeout-ms = <50>;
 //            key-positions = <45 48>;
@@ -55,9 +55,14 @@
 //            timeout-ms = <50>;
 //            key-positions = <65 68>;
 //            bindings = <&kp CRIGHT>;
-//        };
-//    };
-//};
+//       };
+        combo_Search {
+            timeout-ms = <50>;
+            key-positions = <42 64>;
+           bindings = <&kp F24>;
+       };
+    };
+};
 
 / {
     keymap {
