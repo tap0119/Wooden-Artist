@@ -92,8 +92,8 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LSHIFT>, <&to NAV>;
+            tapping-term-ms = <700>;
+            bindings = <&kp LSHIFT>, <&mo NAV>;
         };
     };
 
