@@ -24,8 +24,9 @@
 #define LCLICK    LG(F5)
 #define RCLICK    LG(F6)
 #define MCLICK    LG(F7)
-#define SEARCH    LS(F12)
 
+#define SEARCH    LS(F12)
+#define JOURNAL   F21
 //Ctrl + Arrows
 #define CUP     LS(LC(T))
 #define CLEFT   LS(LC(TAB))
@@ -68,13 +69,13 @@
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
     &kp TILDE  &kp GRAVE   &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11   &kp F12     &to QWERTY
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-    &trans         &kp EXCL  &kp QUESTION  &kp UP   &kp K_APP   &kp ESC    &trans    &kp DOLLAR   &kp N7    &kp N8    &kp N9      &none       &trans          &to COLEMAK    
+    &kp DEL        &trans          &trans  &kp UP   &kp K_APP   &kp ESC    &trans    &kp DOLLAR   &kp N7    &kp N8    &kp N9      &none       &trans          &to COLEMAK    
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
     &trans       &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER       &kp BSLH      &kp MINUS    &kp N4     &kp N5      &kp N6   &mo NAV2  &kp SEARCH  &trans      
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &kp COLON     &kp DEL     &trans      &trans     &kp F21  &trans     &trans     &kp PRCNT  &kp N0      &kp N1     &kp N2    &kp N3    &none      &kp PG_UP     &trans    
+    &kp COLON     &kp LSHIFT     &trans    &trans  &kp EXCL  &kp QUESTION   &trans     &kp PRCNT  &kp N0      &kp N1     &kp N2    &kp N3    &none      &kp PG_UP     &trans    
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp F17        &trans      &trans        &trans                          &to MOUSE           &to 0            &to 0     &trans      &kp HOME  &kp PG_DN  &kp END 
+    &kp F17        &trans      &trans        &trans                       &kp JOURNAL          &to 0            &to 0     &trans      &kp HOME  &kp PG_DN  &kp END 
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
@@ -100,13 +101,13 @@
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
    &trans     &reset  &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans  &trans    &trans     &trans     &trans      &trans    &trans  &bootloader  &out OUT_TOG   
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-    &trans          &trans     &trans   &kp MUP &kp RCLICK    &kp PG_UP      &trans    &trans     &kp AMPS  &kp STAR   &trans     &trans     &trans           &bt BT_CLR
+    &trans          &trans     &trans   &kp MUP &kp RCLICK    &kp PG_UP      &trans    &trans     &trans  &trans   &trans     &trans     &trans           &bt BT_CLR
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-     &trans        &kp MLEFT &kp MLEFT  &kp MDOWN   &kp MRIGHT &kp LCLICK    &trans        &kp LPAR  &kp DOLLAR  &kp PRCNT  &kp CARET  &trans      &trans     &trans
- //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &none      &trans      &trans      &trans  &kp MCLICK   &kp PG_DN   &trans     &trans     &kp RPAR  &kp EXCL  &kp AT        &kp HASH   &trans   &trans     &trans
+     &trans        &kp MLEFT &kp MLEFT  &kp MDOWN   &kp MRIGHT &kp LCLICK    &trans        &trans   &trans       &trans       &trans   &trans      &trans     &trans
+ //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻┯━━━━━━━━┹─┬────────┴─┬──────────────┤
+    &none      &trans      &trans      &trans  &kp MCLICK   &kp PG_DN   &trans     &trans     &trans     &trans   &trans     &trans       &trans   &trans     &trans
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &trans        &trans      &trans         &kp LCLICK                   &to 0        &trans               &to 0        &trans       &trans     &trans     &trans
+    &trans        &trans      &trans         &kp LCLICK                   &to 0        &kp RCLICK               &to 0        &trans       &trans     &trans     &trans
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
                >;
         };
