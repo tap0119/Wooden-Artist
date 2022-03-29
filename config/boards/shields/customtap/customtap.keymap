@@ -68,6 +68,11 @@
 //            key-positions = <65 68>;
 //            bindings = <&kp CRIGHT>;
 //       };
+          combo_moNAV {
+              timeout-ms = <500>;
+              key-positions = <63 61>;
+              bindings = <&mo NAV>;
+         };
     };
 };
 / {
