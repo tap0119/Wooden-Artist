@@ -96,8 +96,6 @@
             bindings = <&kp LSHIFT>, <&mo NAV>;
         };
     };
-};
-
 
 / {
     keymap {
