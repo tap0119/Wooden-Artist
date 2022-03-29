@@ -26,6 +26,8 @@
 #define RCLICK    LG(F6)
 #define MCLICK    LG(F7)
 
+#define SEARCH    LS(F12)
+
 //Ctrl + Arrows
 #define CUP     LS(LC(T))
 #define CLEFT   LS(LC(TAB))
@@ -73,26 +75,16 @@
 //            key-positions = <65 68>;
 //            bindings = <&kp CRIGHT>;
 //       };
-        combo_Search {
-            timeout-ms = <700>;
-            key-positions = <44 41>;
-            bindings = <&kp LS(F12)>;
-        };
-         combo_Question {
-           timeout-ms = <700>;
-           key-positions = <44 27>;
-           bindings = <&kp QUESTION>;
-       };
     };
 };
 
 / {
     behaviors {
-        td0: tap_dance_0 {
+        ShiftNav: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
-            tapping-term-ms = <700>;
+            tapping-term-ms = <1000>;
             bindings = <&kp LSHIFT>, <&mo NAV>;
         };
     };
@@ -110,7 +102,7 @@
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
     &kp SEMI   &kp LSHIFT  &kp Q      &kp J     &kp K       &kp X     &kp LBKT   &kp RBKT   &kp B       &kp M     &kp W      &kp V      &kp Z      &kp UP     &kp PG_DN
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE              &to MOUSE            &td0       &kp LSHIFT  &to MOUSE2     &kp LEFT   &kp DOWN   &kp RIGHT
+    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE              &to MOUSE            &ShiftNav       &kp LSHIFT  &to MOUSE2     &kp LEFT   &kp DOWN   &kp RIGHT
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
@@ -122,7 +114,7 @@
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
     &trans         &kp EXCL  &kp QUESTION  &kp UP   &kp K_APP   &kp ESC    &trans    &kp DOLLAR   &kp N7    &kp N8    &kp N9      &none       &trans          &to COLEMAK    
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &trans       &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER       &kp BSLH      &kp MINUS    &kp N4     &kp N5      &kp N6   &mo NAV2  &kp LS(F12)  &trans      
+    &trans       &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER       &kp BSLH      &kp MINUS    &kp N4     &kp N5      &kp N6   &mo NAV2  &kp SEARCH  &trans      
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
     &trans      &trans     &trans      &trans     &kp F21  &trans     &trans     &kp PRCNT  &kp N0      &kp N1     &kp N2    &kp N3    &none      &kp PG_UP     &trans    
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
