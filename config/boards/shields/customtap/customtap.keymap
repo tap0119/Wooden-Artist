@@ -105,7 +105,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "EnterDel";
             #binding-cells = <0>;
-            bindings = <&kp ENTER>, <&kp DEL>;
+            bindings = <&kp ENTER>, <&kp BACKSPACE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -119,11 +119,11 @@
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
     &kp TAB         &kp SQT   &kp COMMA   &kp DOT     &kp P      &kp Y     &kp FSLH     &kp F     &kp G      &kp C      &kp R      &kp L       &kp BSPC       &kp C_VOL_DN
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &kp BSPC       &kp A      &kp O       &kp E     &kp U      &kp I     &to MOUSE       &kp D     &kp H      &kp T      &kp N      &kp S      &kp ENTER  &kp PG_UP
+     &kp LSHIFT      &kp A      &kp O       &kp E     &kp U      &kp I     &to MOUSE       &kp D     &kp H      &kp T      &kp N      &kp S      &kp ENTER  &kp PG_UP
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-      &kp SEMI &kp LSHIFT &kp Q      &kp J     &kp K       &kp X     &kp LBKT   &kp RBKT   &kp B       &kp M     &kp W      &kp V       &kp Z      &kp UP      &kp PG_DN
+      &kp SEMI &kp BSPC &kp Q      &kp J     &kp K       &kp X       &kp QUESTION &kp EXCL   &kp B       &kp M     &kp W      &kp V       &kp Z      &kp UP      &kp PG_DN
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE               &EnterDel          &ShiftNav         &mo NAV &to MOUSE2   &kp LEFT   &kp DOWN    &kp RIGHT
+    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE               &EnterDel        &ShiftNav         &mo NAV &to MOUSE2   &kp LEFT   &kp DOWN    &kp RIGHT
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
@@ -135,9 +135,9 @@
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
     &kp JOURNAL        &trans          &trans  &kp UP   &kp K_APP   &kp ESC    &trans    &kp DOLLAR   &kp N7    &kp N8    &kp N9      &none       &kp BACKSLASH      &to COLEMAK    
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &trans       &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER       &kp PERCENT   &kp MINUS    &kp N4     &kp N5      &kp N6   &mo NAV2  &kp SEARCH  &trans      
+    &trans       &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER    &kp PERCENT   &kp MINUS    &kp N4     &kp N5      &kp N6   &mo NAV2  &kp SEARCH  &trans      
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &kp COLON  &kp LSHIFT  &trans    &trans  &kp EXCL  &kp QUESTION  &kp LPAR  &kp RPAR  &kp N0      &kp N1     &kp N2    &kp N3    &none      &kp PG_UP     &trans    
+    &kp COLON  &kp trans  &trans    &trans         &kp DEL   &trans    &kp LBKT   &kp RBKT  &kp N0      &kp N1     &kp N2    &kp N3    &none      &kp PG_UP     &trans    
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
     &kp F17        &trans      &trans        &trans                       &kp DEL          &to 0            &to 0     &trans      &kp HOME  &kp PG_DN  &kp END 
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
