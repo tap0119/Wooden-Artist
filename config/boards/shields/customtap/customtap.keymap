@@ -47,6 +47,52 @@
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
 
 / {
+    macros {
+        btTOGGLE: btTOGGLE {
+            label = "btTOGGLE";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &out OUT_TOG &to 0>;
+        };
+        btCLEAR: btCLEAR {
+            label = "btCLEAR";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &bt BT_CLR &to 0>;
+        };
+        bt1: bt1 {
+            label = "bt1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &bt BT_SEL 0 &to 0>;
+        };
+        bt2: bt2 {
+            label = "bt2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &bt BT_SEL 1 &to 0>;
+        };
+        bt3: bt3 {
+            label = "bt3";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &bt BT_SEL 2 &to 0>;
+        };
+        bt4: bt4 {
+            label = "bt4";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &bt BT_SEL 3 &to 0>;
+        };
+    };
+};
+/ {
     behaviors {
         ShiftNav: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
@@ -110,9 +156,9 @@
         MOUSE {
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-   &to 0     &reset  &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans  &trans    &trans     &trans     &trans      &trans   &trans  &bootloader  &out OUT_TOG   
+   &to 0     &reset       &bt1       &bt2        &bt3      &bt4           &trans  &trans    &trans     &trans     &trans      &trans   &trans  &bootloader  &btTOGGLE  
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-    &trans          &trans     &trans   &kp MUP &kp RCLICK    &kp PG_UP      &trans    &trans     &trans  &trans   &trans     &trans     &trans           &bt BT_CLR
+    &trans          &trans     &trans   &kp MUP &kp RCLICK    &kp PG_UP      &trans    &trans     &trans     &trans   &trans     &trans     &trans           &btCLEAR
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
      &trans        &kp MLEFT &kp MLEFT  &kp MDOWN   &kp MRIGHT &kp LCLICK    &trans        &trans   &trans       &trans       &trans   &trans      &trans     &trans
  //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻┯━━━━━━━━┹─┬────────┴─┬──────────────┤
