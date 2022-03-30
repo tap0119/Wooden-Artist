@@ -119,11 +119,11 @@
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
     &kp TAB         &kp SQT   &kp COMMA   &kp DOT     &kp P      &kp Y     &kp BSLH   &kp F     &kp G      &kp C      &kp R      &kp L       &kp BSPC       &kp C_VOL_DN
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &kp BSPC      &kp A      &kp O       &kp E     &kp U      &kp I        &kp FSLH      &kp D     &kp H      &kp T      &kp N      &kp S     &mo NAV    &kp ENTER
+    &kp BSPC      &kp A      &kp O       &kp E     &kp U      &kp I        &kp FSLH      &kp D     &kp H      &kp T      &kp N      &kp S     &kp LSHIFT    &kp ENTER
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-      &kp SEMI &mo NAV  &kp Q      &kp J     &kp K       &kp X  &to MOUSE   &kp EXCL   &kp B       &kp M     &kp W      &kp V       &kp Z      &kp UP     &mo NAV   
+      &kp SEMI &kp LSHIFT  &kp Q      &kp J     &kp K       &kp X  &to MOUSE   &kp EXCL   &kp B       &kp M     &kp W      &kp V       &kp Z      &kp UP     &mo NAV   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE              &kp ENTER        &kp LSHIFT          &kp MINUS    &to MOUSE2  &kp LEFT   &kp DOWN    &kp RIGHT
+    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE              &kp ENTER        &mo NAV         &kp MINUS    &to MOUSE2  &kp LEFT   &kp DOWN    &kp RIGHT
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
