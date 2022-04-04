@@ -5,13 +5,13 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define NAV     1
-#define NAV2    2
-#define GAME    3
+#define NAV     7
+#define NAV2    6
+#define GAME    5
 #define MOUSE   4
-#define MOUSE2  5
-#define QWERTY  6
-#define COLEMAK 7
+#define MOUSE2  3
+#define QWERTY  2
+#define COLEMAK 1
 
 //Mouse Movement
 //#define MUP     MOVE(0,-600)
