@@ -90,17 +90,16 @@
             bindings
                 = <&macro_tap &bt BT_SEL 3 &to 0>;
         };
+        compatible = "zmk,combos";
+        combo_space {
+            timeout-ms = <50>;
+            key-positions = <63 61>;
+            bindings = <&mo NAV>;
+        };
     };
 };
 / {
-    behaviors {
-        SpaceNav: SpaceNav {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SpaceNav";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&mo NAV>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };            
+    behaviors {          
         EnterDel: EnterDel {
             compatible = "zmk,behavior-mod-morph";
             label = "EnterDel";
@@ -123,7 +122,7 @@
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
    &kp SEMI  &mo NAV    &kp Q      &kp J     &kp K       &kp X  &to MOUSE   &kp EXCL  &kp B       &kp M     &kp W      &kp V       &kp Z      &kp UP     &mo NAV   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI    &kp LALT              &SpaceNav           &kp ENTER       &kp LSHIFT          &mo NAV   &to MOUSE2  &kp LEFT   &kp DOWN    &kp RIGHT
+    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE           &kp ENTER       &kp LSHIFT          &mo NAV   &to MOUSE2  &kp LEFT   &kp DOWN    &kp RIGHT
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
