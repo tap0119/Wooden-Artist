@@ -98,7 +98,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "SpaceNav";
             #binding-cells = <0>;
-            bindings = <&kp Space>, <&mo NAV>;
+            bindings = <&kp SPACE>, <&mo NAV>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };            
         EnterDel: EnterDel {
