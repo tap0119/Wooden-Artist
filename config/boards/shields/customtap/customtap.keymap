@@ -47,32 +47,6 @@
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        combo_cup {
-              timeout-ms = <200>;
-              key-positions = <57 56>;
-              bindings = <&kp CUP>;
-         };
-        combo_down {
-              timeout-ms = <200>;
-              key-positions = <57 67>;
-              bindings = <&kp CDOWN>;
-        };
-        combo_cleft {
-              timeout-ms = <200>;
-              key-positions = <57 66>;
-              bindings = <&kp CLEFT>;
-        };
-        combo_cright {
-              timeout-ms = <200>;
-              key-positions = <57 68>;
-              bindings = <&kp CRIGHT>;
-          };
-      };
-  };
-
-/ {
     macros {
         btTOGGLE: btTOGGLE {
             label = "btTOGGLE";
@@ -131,7 +105,7 @@
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
     &kp BSPC      &kp A      &kp O       &kp E     &kp U      &kp I        &kp FSLH      &kp D     &kp H      &kp T      &kp N      &kp S     &kp MINUS     &kp ENTER
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-   &kp SEMI  &mo NAV    &kp Q      &kp J     &kp K       &kp X        &to MOUSE   &kp EXCL  &kp B       &kp M     &kp W      &kp V       &kp Z      &kp UP     &kp RCTRL   
+   &kp SEMI  &mo NAV    &kp Q      &kp J     &kp K       &kp X        &to MOUSE   &kp EXCL  &kp B       &kp M     &kp W      &kp V       &kp Z      &kp UP     &mo NAV2   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
     &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE           &kp ENTER       &kp LSHIFT                 &mo NAV   &to MOUSE2  &kp LEFT   &kp DOWN    &kp RIGHT
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
@@ -163,9 +137,9 @@
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
     &trans       &kp CLEFT  &kp CLEFT  &kp CDOWN   &kp CRIGHT  &trans       &trans          &trans      &trans    &trans     &trans    &trans    &trans       &trans
 //├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &none      &trans      &trans      &trans      &trans  &trans   &trans     &trans     &trans     &trans     &trans      &trans     &trans    &trans       &trans
+    &none      &trans      &trans      &trans      &trans  &trans   &trans     &trans     &trans     &trans     &trans      &trans     &trans    &kp CUP       &trans
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &trans        &trans      &trans         &trans                         &trans       &trans                 &to 0        &trans    &trans    &trans       &trans
+    &trans        &trans      &trans         &trans                         &trans       &trans                 &to 0        &trans    &kp RLEFT    &kp CDOWN       &kp CRIGHT
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
