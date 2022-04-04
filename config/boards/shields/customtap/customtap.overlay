@@ -21,26 +21,26 @@
 
         col-gpios
             = <&pro_micro 18 GPIO_ACTIVE_HIGH>  // col 0
-            , <&pro_micro 9 GPIO_ACTIVE_HIGH>   // col 1
-            , <&pro_micro 8 GPIO_ACTIVE_HIGH>   // col 2
-            , <&pro_micro 19 GPIO_ACTIVE_HIGH>  // col 3
-            , <&pro_micro 7 GPIO_ACTIVE_HIGH>   // col 4
-            , <&pro_micro 6 GPIO_ACTIVE_HIGH>   // col 5
-            , <&pro_micro 5 GPIO_ACTIVE_HIGH>   // col 6
-            , <&pro_micro 4 GPIO_ACTIVE_HIGH>   // col 7
-            , <&gpio1 1 GPIO_ACTIVE_HIGH>       // col 8
-            , <&pro_micro 3 GPIO_ACTIVE_HIGH>   // col 9
-            , <&gpio1 2 GPIO_ACTIVE_HIGH>       // col 10
+            , <&pro_micro 15 GPIO_ACTIVE_HIGH>   // col 1
+            , <&pro_micro 16 GPIO_ACTIVE_HIGH>   // col 2
+            , <&pro_micro 5 GPIO_ACTIVE_HIGH>  // col 3
+            , <&gpio1 7 GPIO_ACTIVE_HIGH>    // col 4
+            , <&pro_micro 9 GPIO_ACTIVE_HIGH>   // col 5
+            , <&gpio1 2 GPIO_ACTIVE_HIGH>   // col 6
+            , <&pro_micro 19 GPIO_ACTIVE_HIGH>   // col 7
+            , <&pro_micro 7 GPIO_ACTIVE_HIGH>      // col 8
+            , <&pro_micro 6 GPIO_ACTIVE_HIGH>   // col 9
+            , <&pro_micro 3 GPIO_ACTIVE_HIGH>      // col 10
             , <&pro_micro 2 GPIO_ACTIVE_HIGH>   // col 11
             ;
 
         row-gpios
-            = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row 0
-            , <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row 1
-            , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row 2
-            , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row 3
-            , <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row 4
-            , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row 5
+            = <&pro_micro 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row 0
+            , <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row 1
+            , <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row 2
+            , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row 3
+            , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row 4
+            , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // row 5
             ;
     };
 
@@ -60,7 +60,7 @@
 //├──────────┬──┺━━━━━━━━┯━━┻━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
       RC(3,0)   RC(3,1)    RC(4,1)    RC(4,2)    RC(4,3)     RC(4,4)    RC(4,5)   RC(5,6)   RC(4,6)    RC(4,7)    RC(4,8)    RC(4,9)     RC(4,10)  RC(3,10)    RC(3,11)
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    RC(4,0)         RC(5,0)    RC(5,1)                RC(5,3)                RC(5,5)         RC(5,7)            RC(5,8)    RC(5,9)     RC(5,10)   RC(5,11)    RC(4,11)
+    RC(4,0)         RC(5,0)    RC(5,2)                RC(5,4)                RC(5,5)         RC(5,7)            RC(5,8)    RC(5,9)     RC(5,10)   RC(5,11)    RC(4,11)
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
     
     
