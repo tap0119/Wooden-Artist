@@ -46,16 +46,34 @@
 //     58           59         60                       61                    62                63               64           65           66        67          68
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
 
-/// {
-//    combos {
-//        compatible = "zmk,combos";
-//        combo_space {
-//            timeout-ms = <100>;
-//            key-positions = <63 61>;
-//            bindings = <&mo NAV>;
-//        };
-//    };
-//};
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_cup {
+              timeout-ms = <200>;
+              key-positions = <57 56>;
+              bindings = <&kp CUP>;
+         };
+        compatible = "zmk,combos"
+        combo_down {
+              timeout-ms = <200>;
+              key-positions = <57 67>;
+              bindings = <&kp CDOWN>;
+        };
+        compatible = "zmk,combos";
+        combo_cleft {
+              timeout-ms = <200>;
+              key-positions = <57 66>;
+              bindings = <&kp CLEFT>;
+        };
+        compatible = "zmk,combos";
+        combo_cright {
+              timeout-ms = <200>;
+              key-positions = <57 68>;
+              bindings = <&kp CRIGHT>;
+          };
+      };
+  };
 
 / {
     macros {
@@ -116,9 +134,9 @@
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
     &kp BSPC      &kp A      &kp O       &kp E     &kp U      &kp I        &kp FSLH      &kp D     &kp H      &kp T      &kp N      &kp S     &kp MINUS     &kp ENTER
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-   &kp SEMI  &mo NAV    &kp Q      &kp J     &kp K       &kp X  &to MOUSE   &kp EXCL  &kp B       &kp M     &kp W      &kp V       &kp Z      &kp UP     &mo NAV   
+   &kp SEMI  &mo NAV    &kp Q      &kp J     &kp K       &kp X        &to MOUSE   &kp EXCL  &kp B       &kp M     &kp W      &kp V       &kp Z      &kp UP     &kp RCTRL   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE           &kp ENTER       &kp LSHIFT          &mo NAV   &to MOUSE2  &kp LEFT   &kp DOWN    &kp RIGHT
+    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE           &kp ENTER       &kp LSHIFT                 &mo NAV   &to MOUSE2  &kp LEFT   &kp DOWN    &kp RIGHT
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
