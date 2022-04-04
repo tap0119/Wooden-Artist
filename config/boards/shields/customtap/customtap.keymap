@@ -102,13 +102,6 @@
             bindings = <&kp SPACE>, <&kp BSPC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        questionslash: questionslash {
-            compatible = "zmk,behavior-mod-morph";
-            label = "questionslash";
-            #binding-cells = <0>;
-            bindings = <&kp QUESTION>, <&kp BSLH>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
     keymap {
         compatible = "zmk,keymap";
@@ -121,7 +114,7 @@
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
     &kp BSPC      &kp A      &kp O       &kp E     &kp U      &kp I     &to MOUSE        &kp D     &kp H      &kp T      &kp N      &kp S     &kp MINUS     &kp ENTER
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-   &kp SEMI  &mo NAV    &kp Q      &kp J     &kp K       &kp X    &questionslash   &kp EXCL  &kp B       &kp M     &kp W      &kp V       &kp Z      &kp UP     &mo NAV2   
+   &kp SEMI  &mo NAV       &kp Q      &kp J     &kp K       &kp X    &kp LBKT    &kp RBKT  &kp B       &kp M     &kp W      &kp V       &kp Z      &kp UP     &mo NAV2   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
     &kp LCTRL    &kp LGUI    &kp LALT              &spacebs               &kp ENTER       &kp LSHIFT                 &mo NAV   &to MOUSE2  &kp LEFT   &kp DOWN    &kp RIGHT
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
@@ -133,11 +126,11 @@
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
     &kp TILDE  &kp GRAVE   &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11   &kp F12     &to QWERTY
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-    &kp JOURNAL     &kp DQT     &trans  &kp UP   &kp K_APP   &kp ESC    &trans    &kp DOLLAR   &kp N7    &kp N8    &kp N9      &none       &kp BACKSLASH      &to COLEMAK    
+    &kp JOURNAL     &kp DQT     &trans  &kp UP   &kp K_APP   &kp ESC      &kp PIPE    &kp DOLLAR   &kp N7    &kp N8    &kp N9      &none       &kp BACKSLASH      &to COLEMAK    
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &trans       &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER    &kp PERCENT   &kp MINUS    &kp N4     &kp N5      &kp N6   &none       &trans &kp SEARCH        
+    &trans       &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER      &none  &kp MINUS    &kp N4     &kp N5      &kp N6   &none       &trans &kp SEARCH        
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-      &kp COLON &kp DEL &trans    &trans      &kp QUESTION   &trans    &kp LBKT    &kp RBKT  &kp N0      &kp N1     &kp N2    &kp N3    &none      &kp PG_UP     &trans    
+      &kp COLON &kp DEL &trans         &trans &kp QUESTION & kp EXCL  &none       &kp PERCENT     &kp N0      &kp N1     &kp N2    &kp N3    &none      &kp PG_UP     &trans    
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
     &trans        &trans      &trans        &trans                       &kp DEL           &to 0               &to 0       &trans      &kp HOME  &kp PG_DN  &kp END 
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
