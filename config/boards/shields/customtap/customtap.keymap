@@ -10,7 +10,7 @@
 #define GAME    3
 #define MOUSE   4
 #define MOUSE2  5
-#define QWERTY  5
+#define QWERTY  6
 #define COLEMAK 7
 
 //Mouse Movement
