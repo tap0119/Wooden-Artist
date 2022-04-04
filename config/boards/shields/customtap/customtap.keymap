@@ -47,6 +47,17 @@
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_space {
+            timeout-ms = <500>;
+            key-positions = <63 61>;
+            bindings = <&mo NAV>;
+        };
+    };
+};
+
+/ {
     macros {
         btTOGGLE: btTOGGLE {
             label = "btTOGGLE";
@@ -90,14 +101,9 @@
             bindings
                 = <&macro_tap &bt BT_SEL 3 &to 0>;
         };
-        compatible = "zmk,combos";
-        combo_space {
-            timeout-ms = <50>;
-            key-positions = <63 61>;
-            bindings = <&mo NAV>;
-        };
     };
 };
+
 / {
     behaviors {          
         EnterDel: EnterDel {
