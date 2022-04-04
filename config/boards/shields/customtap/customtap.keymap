@@ -102,6 +102,13 @@
             bindings = <&kp SPACE>, <&kp BSPC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        questionslash: questionslash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "questionslash";
+            #binding-cells = <0>;
+            bindings = <&kp QUESTION>, <&kp BSLH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
     keymap {
         compatible = "zmk,keymap";
@@ -110,11 +117,11 @@
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
     &kp ESC   &kp EQUAL    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0      &kp PSCRN  &kp DEL    &kp C_VOL_UP
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-    &kp TAB         &kp SQT   &kp COMMA   &kp DOT     &kp P      &kp Y     &kp BSLH   &kp F     &kp G      &kp C      &kp R      &kp L       &kp BSPC       &kp C_VOL_DN
+    &kp TAB         &kp SQT   &kp COMMA   &kp DOT     &kp P      &kp Y     &kp FSLH    &kp F     &kp G      &kp C      &kp R      &kp L       &kp BSPC       &kp C_VOL_DN
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &kp BSPC      &kp A      &kp O       &kp E     &kp U      &kp I        &kp FSLH      &kp D     &kp H      &kp T      &kp N      &kp S     &kp MINUS     &kp ENTER
+    &kp BSPC      &kp A      &kp O       &kp E     &kp U      &kp I     &to MOUSE        &kp D     &kp H      &kp T      &kp N      &kp S     &kp MINUS     &kp ENTER
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-   &kp SEMI  &mo NAV    &kp Q      &kp J     &kp K       &kp X        &to MOUSE   &kp EXCL  &kp B       &kp M     &kp W      &kp V       &kp Z      &kp UP     &mo NAV2   
+   &kp SEMI  &mo NAV    &kp Q      &kp J     &kp K       &kp X    &questionslash   &kp EXCL  &kp B       &kp M     &kp W      &kp V       &kp Z      &kp UP     &mo NAV2   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
     &kp LCTRL    &kp LGUI    &kp LALT              &spacebs               &kp ENTER       &kp LSHIFT                 &mo NAV   &to MOUSE2  &kp LEFT   &kp DOWN    &kp RIGHT
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
