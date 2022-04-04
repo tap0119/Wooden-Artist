@@ -5,13 +5,13 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define NAV     7
-#define NAV2    6
-#define GAME    5
-#define MOUSE   4
-#define MOUSE2  3
-#define QWERTY  2
 #define COLEMAK 1
+#define QWERTY  2
+#define MOUSE2  3
+#define MOUSE   4
+#define GAME    5
+#define NAV2    6
+#define NAV     7
 
 //Mouse Movement
 //#define MUP     MOVE(0,-600)
@@ -106,6 +106,7 @@
     };
     keymap {
         compatible = "zmk,keymap";
+        
         default_layer {
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
@@ -122,49 +123,50 @@
             >;
         };
         
-        NAV {
+        COLEMAK{
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-    &kp TILDE  &kp GRAVE   &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11   &kp F12     &trans
+    &trans    &trans      &trans     &trans      &trans    &trans     &trans     &trans     &trans     &trans     &trans       &trans    &trans    &trans      &trans
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-    &kp JOURNAL     &kp DQT     &trans  &kp UP   &kp K_APP   &kp ESC      &kp PIPE    &kp DOLLAR   &kp N7    &kp N8    &kp N9      &none       &kp BACKSLASH    &trans      
+    &trans          &kp Q      &kp W      &kp F      &kp P         &kp B    &to 0      &kp J     &kp L      &kp U     &kp Y      &kp SEMI       &kp MINUS     &trans
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &trans       &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER    &none          &kp MINUS    &kp N4     &kp N5      &kp N6   &none      &kp SEARCH  &kp SEARCH  
-//├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-      &kp COLON &kp DEL &trans         &trans &kp QUESTION &kp EXCL  &none       &kp PERCENT &kp N0      &kp N1     &kp N2    &kp N3    &none      &tog GAME     &trans    
+    &trans          &kp A      &kp R       &kp S     &kp T      &kp G       &trans         &kp M     &kp N      &kp E      &kp I      &kp O       &trans       &trans
+//├──────────┬──┺━━━━━━━┯━━━┻━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
+    &kp Z       &trans          &kp X      &kp C     &kp D     &kp V     &trans     &trans   &kp K       &kp H       &kp COMMA   &kp DOT   &kp FSLH   &trans   &trans
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &trans        &trans      &trans        &trans                       &kp DEL           &to 0               &to 0       &trans      &tog QWERTY  &to 0  &tog COLEMAK 
-//╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
-             >;           
+    &trans        &trans       &trans              &trans                  &trans          &trans               &trans    &trans     &trans       &trans    &trans
+//╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯  
+            >;
         };
         
-        NAV2 {
+       QWERTY{
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-    &bootloader    &reset       &bt1       &bt2        &bt3      &bt4       &trans     &trans     &trans     &trans     &trans      &trans    &trans     &trans    &kp PG_UP
+    &trans    &trans      &trans     &trans      &trans    &trans     &trans     &trans     &trans     &trans     &trans       &trans    &trans    &trans     &trans
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-    &btTOGGLE          &trans     &trans     &trans    &trans     &trans       &to 0    &trans     &trans    &trans     &trans     &trans        &trans         &kp PG_DN
+    &trans          &kp Q      &kp W      &kp E      &kp R     &kp T        &to 0       &kp Y     &kp U      &kp I     &kp O      &kp P       &kp MINUS        &trans
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &trans       &trans  &trans  &trans   &trans  &trans       &trans          &trans      &trans    &trans     &trans    &trans    &trans       &trans
-//├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &trans     &trans      &trans      &trans      &trans  &trans   &trans     &trans     &trans     &trans     &trans      &trans     &trans    &kp CUP       &trans
+    &trans          &kp A      &kp S      &kp D     &kp F      &kp G       &trans         &kp H     &kp J      &kp K      &kp L      &kp SEMI     &trans     &trans
+//├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
+  &kp Z      &trans             &kp X      &kp C     &kp V       &kp B     &trans     &trans   &kp N       &kp M       &kp COMMA   &kp DOT   &kp FSLH   &trans     &trans
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-     &btCLEAR       &trans      &trans         &trans                         &trans       &trans                 &trans       &trans    &kp CLEFT    &kp CDOWN       &kp CRIGHT
+    &trans        &trans       &trans              &trans                  &trans            &trans          &trans  &trans           &trans    &trans     &trans
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
-        GAME {
+        
+        MOUSE2 {
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-    &trans     &trans      &trans     &trans      &trans    &trans     &trans     &trans     &trans     &trans     &trans      &trans    &trans     &trans    &trans
+    &trans    &trans      &trans     &trans      &trans    &trans     &trans     &trans     &trans     &trans     &trans      &trans    &trans     &kp MCLICK  &kp PG_UP
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-    &trans          &trans     &trans     &trans    &trans     &trans       &to 0   &trans     &trans    &trans     &trans     &trans        &trans         &trans
+    &trans          &trans     &trans     &trans      &trans        &trans   &trans    &trans     &trans    &trans     &trans     &trans      &trans           &kp PG_DN
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &trans       &trans  &trans  &trans   &trans  &trans       &trans          &trans      &trans    &trans     &trans    &trans    &trans       &trans
+    &trans         &trans     &trans      &trans     &trans    &trans      &trans           &trans     &trans    &trans      &trans     &trans     &trans      &kp RCLICK
 //├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &kp LSHIFT     &kp LSHIFT      &trans      &trans      &trans  &trans   &trans     &trans     &trans     &trans     &trans      &trans     &trans    &trans       &trans
+    &trans      &trans      &trans      &trans      &trans  &trans   &trans     &trans     &trans     &trans     &trans      &trans     &trans      &kp MUP    &kp LCLICK
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &trans        &trans      &trans         &trans                         &trans       &trans                 &trans        &trans    &trans    &trans       &trans
+    &trans        &trans      &trans         &trans                         &trans       &trans                 &trans     &to 0    &kp MLEFT  &kp MDOWN  &kp MRIGHT
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
@@ -185,52 +187,52 @@
                >;
         };
         
-        MOUSE2 {
+        GAME {
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-    &trans    &trans      &trans     &trans      &trans    &trans     &trans     &trans     &trans     &trans     &trans      &trans    &trans     &kp MCLICK  &kp PG_UP
+    &trans     &trans      &trans     &trans      &trans    &trans     &trans     &trans     &trans     &trans     &trans      &trans    &trans     &trans    &trans
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-    &trans          &trans     &trans     &trans      &trans        &trans   &trans    &trans     &trans    &trans     &trans     &trans      &trans           &kp PG_DN
+    &trans          &trans     &trans     &trans    &trans     &trans       &to 0   &trans     &trans    &trans     &trans     &trans        &trans         &trans
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &trans         &trans     &trans      &trans     &trans    &trans      &trans           &trans     &trans    &trans      &trans     &trans     &trans      &kp RCLICK
+    &trans       &trans  &trans  &trans   &trans  &trans       &trans          &trans      &trans    &trans     &trans    &trans    &trans       &trans
 //├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &trans      &trans      &trans      &trans      &trans  &trans   &trans     &trans     &trans     &trans     &trans      &trans     &trans      &kp MUP    &kp LCLICK
+    &kp LSHIFT     &kp LSHIFT      &trans      &trans      &trans  &trans   &trans     &trans     &trans     &trans     &trans      &trans     &trans    &trans       &trans
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &trans        &trans      &trans         &trans                         &trans       &trans                 &trans     &to 0    &kp MLEFT  &kp MDOWN  &kp MRIGHT
+    &trans        &trans      &trans         &trans                         &trans       &trans                 &trans        &trans    &trans    &trans       &trans
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
-        };
+        };    
         
-        QWERTY{
+        NAV2 {
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-    &trans    &trans      &trans     &trans      &trans    &trans     &trans     &trans     &trans     &trans     &trans       &trans    &trans    &trans     &trans
+    &bootloader    &reset       &bt1       &bt2        &bt3      &bt4       &trans     &trans     &trans     &trans     &trans      &trans    &trans     &trans    &kp PG_UP
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-    &trans          &kp Q      &kp W      &kp E      &kp R     &kp T        &to 0       &kp Y     &kp U      &kp I     &kp O      &kp P       &kp MINUS        &trans
+    &btTOGGLE          &trans     &trans     &trans    &trans     &trans       &to 0    &trans     &trans    &trans     &trans     &trans        &trans         &kp PG_DN
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &trans          &kp A      &kp S      &kp D     &kp F      &kp G       &trans         &kp H     &kp J      &kp K      &kp L      &kp SEMI     &trans     &trans
+    &trans       &trans  &trans  &trans   &trans  &trans       &trans          &trans      &trans    &trans     &trans    &trans    &trans       &trans
+//├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
+    &trans     &trans      &trans      &trans      &trans  &trans   &trans     &trans     &trans     &trans     &trans      &trans     &trans    &kp CUP       &trans
+//├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
+     &btCLEAR       &trans      &trans         &trans                         &trans       &trans                 &trans       &trans    &kp CLEFT    &kp CDOWN       &kp CRIGHT
+//╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
+            >;
+        };    
+        
+        NAV {
+           bindings = <
+//╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
+    &kp TILDE  &kp GRAVE   &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11   &kp F12     &trans
+//├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
+    &kp JOURNAL     &kp DQT     &trans  &kp UP   &kp K_APP   &kp ESC      &kp PIPE    &kp DOLLAR   &kp N7    &kp N8    &kp N9      &none       &kp BACKSLASH    &trans      
+//├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
+    &trans       &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER    &none          &kp MINUS    &kp N4     &kp N5      &kp N6   &none      &kp SEARCH  &kp SEARCH  
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-  &kp Z      &trans             &kp X      &kp C     &kp V       &kp B     &trans     &trans   &kp N       &kp M       &kp COMMA   &kp DOT   &kp FSLH   &trans     &trans
+      &kp COLON &kp DEL &trans         &trans &kp QUESTION &kp EXCL  &none       &kp PERCENT &kp N0      &kp N1     &kp N2    &kp N3    &none      &tog GAME     &trans    
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &trans        &trans       &trans              &trans                  &trans            &trans          &trans  &trans           &trans    &trans     &trans
+    &trans        &trans      &trans        &trans                       &kp DEL           &to 0               &to 0       &trans      &tog QWERTY  &to 0  &tog COLEMAK 
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
-            >;
-        };
-        
-        COLEMAK{
-           bindings = <
-//╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-    &trans    &trans      &trans     &trans      &trans    &trans     &trans     &trans     &trans     &trans     &trans       &trans    &trans    &trans      &trans
-//├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-    &trans          &kp Q      &kp W      &kp F      &kp P         &kp B    &to 0      &kp J     &kp L      &kp U     &kp Y      &kp SEMI       &kp MINUS     &trans
-//├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &trans          &kp A      &kp R       &kp S     &kp T      &kp G       &trans         &kp M     &kp N      &kp E      &kp I      &kp O       &trans       &trans
-//├──────────┬──┺━━━━━━━┯━━━┻━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &kp Z       &trans          &kp X      &kp C     &kp D     &kp V     &trans     &trans   &kp K       &kp H       &kp COMMA   &kp DOT   &kp FSLH   &trans   &trans
-//├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &trans        &trans       &trans              &trans                  &trans          &trans               &trans    &trans     &trans       &trans    &trans
-//╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯  
-            >;
+             >;           
         };
     };
 };
