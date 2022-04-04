@@ -46,16 +46,16 @@
 //     58           59         60                       61                    62                63               64           65           66        67          68
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-        combo_space {
-            timeout-ms = <100>;
-            key-positions = <63 61>;
-            bindings = <&mo NAV>;
-        };
-    };
-};
+/// {
+//    combos {
+//        compatible = "zmk,combos";
+//        combo_space {
+//            timeout-ms = <100>;
+//            key-positions = <63 61>;
+//            bindings = <&mo NAV>;
+//        };
+//    };
+//};
 
 / {
     macros {
