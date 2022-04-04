@@ -50,7 +50,7 @@
     combos {
         compatible = "zmk,combos";
         combo_space {
-            timeout-ms = <500>;
+            timeout-ms = <200>;
             key-positions = <63 61>;
             bindings = <&mo NAV>;
         };
@@ -104,17 +104,7 @@
     };
 };
 
-/ {
-    behaviors {          
-        EnterDel: EnterDel {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EnterDel";
-            #binding-cells = <0>;
-            bindings = <&kp ENTER>, <&kp DEL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    };
-    
+/ {    
     keymap {
         compatible = "zmk,keymap";
         default_layer {
