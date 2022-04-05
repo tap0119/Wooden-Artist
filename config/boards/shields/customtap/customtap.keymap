@@ -103,7 +103,6 @@
             bindings = <&kp SPACE>, <&kp BSPC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    };
         spacenav: spacenav {
             compatible = "zmk,behavior-hold-tap";
             label = "spacenav";
