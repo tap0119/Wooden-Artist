@@ -104,6 +104,18 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
+        spacenav: spacenav {
+            compatible = "zmk,behavior-hold-tap";
+            label = "spacenav";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <400>;
+            quick-tap-ms = <200>;
+            bindings = <&mo>, <&kp>;
+            hold-trigger-key-positions = <61>;
+        };
+    };
+    
     keymap {
         compatible = "zmk,keymap";
         
@@ -118,7 +130,7 @@
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
    &kp SEMI  &mo NAV       &kp Q      &kp J     &kp K       &kp X    &kp LBKT    &kp RBKT  &kp B       &kp M     &kp W      &kp V       &kp Z      &kp UP     &mo NAV2   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI    &kp LALT              &spacebs               &kp ENTER       &kp LSHIFT                 &mo NAV   &to MOUSE2  &kp LEFT   &kp DOWN    &kp RIGHT
+    &kp LCTRL    &kp LGUI    &kp LALT              &spacenav 1 SPACE        &kp ENTER       &kp LSHIFT                 &mo NAV   &to MOUSE2  &kp LEFT   &kp DOWN    &kp RIGHT
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
@@ -230,7 +242,7 @@
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
       &kp COLON &kp DEL &trans         &trans &kp QUESTION &kp EXCL  &kp UNDER   &kp PERCENT &kp N0      &kp N1     &kp N2    &kp N3    &none      &tog GAME     &trans    
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &trans        &trans      &trans        &trans                       &kp DEL           &to 0               &to 0       &trans      &tog QWERTY  &to 0  &tog COLEMAK 
+    &trans        &trans      &trans        &kp SPACE                       &kp DEL           &to 0               &to 0       &trans      &tog QWERTY  &to 0  &tog COLEMAK 
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
              >;           
         };
