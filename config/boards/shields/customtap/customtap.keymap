@@ -49,9 +49,9 @@
 
 / {    
     behaviors {
-        spacebs: spacenav {
+        spacenav: spacenav {
             compatible = "zmk,behavior-mod-morph";
-            label = "spacebs";
+            label = "spacenav";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&mo NAV>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
