@@ -100,7 +100,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "spacebs";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp BSPC>;
+            bindings = <&kp SPACE>, <&mo NAV>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         spacenav: spacenav {
@@ -128,7 +128,7 @@
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
    &kp SEMI  &mo NAV       &kp Q      &kp J     &kp K       &kp X    &kp LBKT    &kp RBKT  &kp B       &kp M     &kp W      &kp V       &kp Z      &kp UP     &mo NAV2   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI    &kp LALT              &spacenav NAV SPACE        &kp ENTER       &kp LSHIFT                 &mo NAV   &to MOUSE2  &kp LEFT   &kp DOWN    &kp RIGHT
+    &kp LCTRL    &kp LGUI    &kp LALT              &spacebs        &kp ENTER       &kp LSHIFT                 &mo NAV   &to MOUSE2  &kp LEFT   &kp DOWN    &kp RIGHT
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
