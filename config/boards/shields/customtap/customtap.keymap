@@ -47,72 +47,15 @@
 //     58           59         60                       61                    62                63               64           65           66        67          68
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
 
-/ {
-    macros {
-        btTOGGLE: btTOGGLE {
-            label = "btTOGGLE";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &out OUT_TOG &to 0>;
-        };
-        btCLEAR: btCLEAR {
-            label = "btCLEAR";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &bt BT_CLR &to 0>;
-        };
-        bt1: bt1 {
-            label = "bt1";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &bt BT_SEL 0 &to 0>;
-        };
-        bt2: bt2 {
-            label = "bt2";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &bt BT_SEL 1 &to 0>;
-        };
-        bt3: bt3 {
-            label = "bt3";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &bt BT_SEL 2 &to 0>;
-        };
-        bt4: bt4 {
-            label = "bt4";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &bt BT_SEL 3 &to 0>;
-        };
-    };
-};
-
 / {    
     behaviors {
-        spacebs: spacebs {
+        spacebs: spacenav {
             compatible = "zmk,behavior-mod-morph";
             label = "spacebs";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&mo NAV>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        spacenav: spacenav {
-            compatible = "zmk,behavior-hold-tap";
-            label = "spacenav";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            bindings = <&mo>, <&kp>;
-        };
-    };
     
     keymap {
         compatible = "zmk,keymap";
@@ -128,7 +71,7 @@
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
    &kp SEMI  &mo NAV       &kp Q      &kp J     &kp K       &kp X    &kp LBKT    &kp RBKT  &kp B       &kp M     &kp W      &kp V       &kp Z      &kp UP     &mo NAV2   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI    &kp LALT              &spacebs        &kp ENTER       &kp LSHIFT                 &mo NAV   &to MOUSE2  &kp LEFT   &kp DOWN    &kp RIGHT
+    &kp LCTRL    &kp LGUI    &kp LALT              &spacenav        &kp ENTER       &kp LSHIFT                 &mo NAV   &to MOUSE2  &kp LEFT   &kp DOWN    &kp RIGHT
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
@@ -216,15 +159,15 @@
         NAV2 {
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-    &bootloader    &reset       &bt1       &bt2        &bt3      &bt4       &trans     &trans     &trans     &trans     &trans      &trans    &trans     &trans    &kp PG_UP
+&bootloader &reset &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3 &trans     &trans     &trans     &trans     &trans      &trans    &trans     &trans    &kp PG_UP
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-    &btTOGGLE          &trans     &trans     &trans    &trans     &trans       &to 0    &trans     &trans    &trans     &trans     &trans        &trans         &kp PG_DN
+    &out OUT_TOG         &trans     &trans     &trans    &trans     &trans       &to 0    &trans     &trans    &trans     &trans     &trans        &trans         &kp PG_DN
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
     &trans       &trans  &trans  &trans   &trans  &trans       &trans          &trans      &trans    &trans     &trans    &trans    &trans       &trans
 //├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
     &trans     &trans      &trans      &trans      &trans  &trans   &trans     &trans     &trans     &trans     &trans      &trans     &trans    &kp CUP       &trans
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-     &btCLEAR       &trans      &trans         &trans                         &trans       &trans                 &trans       &trans    &kp CLEFT    &kp CDOWN       &kp CRIGHT
+     &bt BT_CLR      &trans      &trans         &trans                         &trans       &trans                 &trans       &trans    &kp CLEFT    &kp CDOWN       &kp CRIGHT
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };    
