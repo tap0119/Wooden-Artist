@@ -59,30 +59,30 @@
             bindings = <&kp SPACE>, <&mo NAV>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };   
-        CUP: CUP {
+        cup: cup {
             compatible = "zmk,behavior-mod-morph";
-            label = "CUP";
+            label = "cup";
             #binding-cells = <0>;
             bindings = <&kp UP>, <&kp CUP>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
-        CDOWN: CDOWN {
+        cdown: cdown {
             compatible = "zmk,behavior-mod-morph";
-            label = "CDOWN";
+            label = "cdown";
             #binding-cells = <0>;
             bindings = <&kp DOWN>, <&kp CDOWN)>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
-        CLEFT: CLEFT {
+        cleft: cleft {
             compatible = "zmk,behavior-mod-morph";
-            label = "CUP";
+            label = "cleft";
             #binding-cells = <0>;
             bindings = <&kp LEFT>, <&kp CLEFT>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
-        CRIGHT: CRIGHT {
+        cright: cright {
             compatible = "zmk,behavior-mod-morph";
-            label = "CUP";
+            label = "cright";
             #binding-cells = <0>;
             bindings = <&kp LEFT>, <&kp CRIGHT>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -101,9 +101,9 @@
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
     &kp BSPC      &kp A      &kp O       &kp E     &kp U      &kp I     &to MOUSE        &kp D     &kp H      &kp T      &kp N      &kp S     &kp MINUS     &kp ENTER
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-   &kp SEMI  &mo NAV       &kp Q      &kp J     &kp K       &kp X    &kp LBKT    &kp RBKT  &kp B       &kp M     &kp W      &kp V       &kp Z      &CUP     &mo NAV2   
+   &kp SEMI  &mo NAV       &kp Q      &kp J     &kp K       &kp X    &kp LBKT    &kp RBKT  &kp B       &kp M     &kp W      &kp V       &kp Z      &cup     &mo NAV2   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE        &kp ENTER       &kp LSHIFT                 &mo NAV   &tog MOUSE2      &CLEFT   &CDOWN    &CRIGHT
+    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE        &kp ENTER       &kp LSHIFT                 &mo NAV   &tog MOUSE2      &cleft   &cdown    &cright
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
