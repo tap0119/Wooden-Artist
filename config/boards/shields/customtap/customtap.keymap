@@ -222,15 +222,15 @@
         WIDER {
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-   &kp ESC   &kp EQUAL   &kp N1     &kp N2     &kp N3     &kp N4     &kp N5      &none     &none        &none     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     
+   &kp ESC     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5      &none      &none     &none        &none     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-   &kp TAB           &kp SQT  &kp COMMA   &kp DOT     &kp P      &kp Y       &to 0   &none         &none       &kp F     &kp G      &kp C      &kp R           &kp L      
+    &kp SQT         &kp COMMA   &kp DOT     &kp P      &kp Y      &none    &to 0      &none        &none       &kp F     &kp G      &kp C      &kp R           &kp L      
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-     &kp BSPC &kp A        &kp O          &kp E     &kp U      &kp I         &none        &none       &kp MINUS  &kp D     &kp H      &kp T      &kp N          &kp S   
+     &kp A        &kp O          &kp E     &kp U      &kp I      &none        &none       &none      &kp MINUS  &kp D     &kp H      &kp T      &kp N          &kp S   
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-   &kp SEMI    &mo NAV       &kp Q      &kp J     &kp K       &kp X    &kp LBKT    &kp RBKT   &none     &none      &kp B       &kp M     &kp W      &kp V       &kp Z         
+   &kp SEMI      &kp Q      &kp J     &kp K       &kp X    &none      &kp LBKT    &kp RBKT   &none     &none      &kp B       &kp M     &kp W      &kp V       &kp Z         
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE              &kp ENTER          &none              &mo NAV   &kp LSHIFT    &mo NAV   &none      &none
+    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE              &kp ENTER          &none              &mo NAV   &kp LSHIFT    &kp BSPC   &none      &none
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
