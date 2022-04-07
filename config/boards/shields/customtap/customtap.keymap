@@ -223,30 +223,30 @@
         WIDER {
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-   &kp ESC     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5      &none      &none     &none        &none     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     
+   &kp ESC   &kp EQUAL    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5      &none      &none      &none     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-    &kp SQT         &kp COMMA   &kp DOT     &kp P      &kp Y      &none    &to 0      &none        &none       &kp F     &kp G      &kp C      &kp R           &kp L      
+   &kp TAB  &kp SQT         &kp COMMA   &kp DOT     &kp P      &kp Y         &to 0       &non      &none       &kp F     &kp G      &kp C      &kp R           &kp L      
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-     &kp A        &kp O          &kp E     &kp U      &kp I      &none        &none       &none      &kp MINUS  &kp D     &kp H      &kp T      &kp N          &kp S   
+   &kp BSPC  &kp A        &kp O          &kp E     &kp U      &kp I      &none           &none        &kp MINUS  &kp D     &kp H      &kp T      &kp N          &kp S   
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-   &kp SEMI      &kp Q      &kp J     &kp K       &kp X    &none      &kp LBKT    &kp RBKT   &none     &none      &kp B       &kp M     &kp W      &kp V       &kp Z         
+   &kp SEMI    &mo NAV   &kp Q      &kp J     &kp K       &kp X    &none      &kp LBKT    &kp RBKT       &none      &kp B       &kp M     &kp W      &kp V       &kp Z         
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI    &mo WIDERNAV           &kp SPACE              &kp ENTER          &none           &mo WIDERNAV   &kp LSHIFT    &kp BSPC   &none     &kp LALT 
+    &kp LCTRL    &kp LGUI   &kp LALT             &kp SPACE                  &to 0           &none                  &kp ENTER   &kp LSHIFT  &mo WIDERNAV       &none
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
         WIDERNAV {
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-    &kp GRAVE   &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11   &kp F12    &none      &none
+   &kp TILDE    &kp GRAVE  &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11   &kp F12    &none      
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-       &kp EXCL   &trans       &kp UP   &kp K_APP   &kp ESC       &none     &none      &none   &kp PIPE    &kp DOLLAR  &kp N7    &kp N8       &kp N9      &kp N0        
+     &kp JOURNAL  &kp EXCL   &trans       &kp UP   &kp K_APP   &kp ESC       &none        &none   &kp PIPE    &kp DOLLAR  &kp N7    &kp N8       &kp N9      &kp N0        
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-     &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER    &none     &none             &none     &none      &kp MINUS    &kp N4     &kp N5      &kp N6   &kp ENTER     
+    &trans   &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER    &none     &none         &none      &kp MINUS    &kp N4     &kp N5      &kp N6   &kp ENTER     
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-     &kp DEL     &trans     &trans  &kp SPACE  &kp QUESTION  &kp UNDER  &none        &none    &none    &kp PERCENT &kp N0     &kp N1     &kp N2    &kp N3    &none         
+    &kp COLON &kp DEL     &trans     &trans  &kp SPACE  &kp QUESTION  &kp UNDER  &none         &none    &kp PERCENT &kp N0     &kp N1     &kp N2    &kp N3    &none         
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp JOURNAL     &trans   &kp LSHIFT     &kp SPACE                       &kp LSHIFT         &kp LSHIFT       &none       &none        &none      &none     &none      
+   &trans      &trans       &kp LSHIFT     &kp SPACE                       &kp LSHIFT         &kp LSHIFT       &none       &none        &none      &none     &none      
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
              >;           
         };
