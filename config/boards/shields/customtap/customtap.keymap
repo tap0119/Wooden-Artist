@@ -77,7 +77,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "cleft";
             #binding-cells = <0>;
-            bindings = <&kp LEFT>, <&kp CLEFT>;
+            bindings = <&kp LEFT>, <&kp LS(LC(TAB))>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
         cright: cright {
