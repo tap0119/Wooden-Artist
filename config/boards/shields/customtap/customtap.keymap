@@ -70,7 +70,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "cdown";
             #binding-cells = <0>;
-            bindings = <&kp DOWN>, <&kp CDOWN)>;
+            bindings = <&kp DOWN>, <&kp CDOWN>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
         cleft: cleft {
