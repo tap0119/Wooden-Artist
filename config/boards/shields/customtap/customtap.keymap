@@ -85,7 +85,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "cright";
             #binding-cells = <0>;
-            bindings = <&kp LEFT>, <&kp CRIGHT>;
+            bindings = <&kp RIGHT>, <&kp CRIGHT>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
