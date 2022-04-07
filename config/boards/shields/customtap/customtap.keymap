@@ -52,40 +52,35 @@
 
 / {    
     behaviors {
-        spacenav: spacenav {
+         spacenav: spacenav {
             compatible = "zmk,behavior-mod-morph";
             label = "spacenav";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&mo NAV>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    };
-    
-    CUP: CUP {
+        };   
+        CUP: CUP {
             compatible = "zmk,behavior-mod-morph";
             label = "CUP";
             #binding-cells = <0>;
             bindings = <&kp UP>, <&kp CUP>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
-    };
-    CDOWN: CDOWN {
+        CDOWN: CDOWN {
             compatible = "zmk,behavior-mod-morph";
             label = "CDOWN";
             #binding-cells = <0>;
             bindings = <&kp DOWN>, <&kp CDOWN)>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
-    };
-    CLEFT: CLEFT {
+        CLEFT: CLEFT {
             compatible = "zmk,behavior-mod-morph";
             label = "CUP";
             #binding-cells = <0>;
             bindings = <&kp LEFT>, <&kp CLEFT>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
-    };
-    CRIGHT: CRIGHT {
+        CRIGHT: CRIGHT {
             compatible = "zmk,behavior-mod-morph";
             label = "CUP";
             #binding-cells = <0>;
