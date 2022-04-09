@@ -91,14 +91,12 @@
         back: back {
             compatible = "zmk,behavior-mod-morph";
             label = "back";
-            #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp BACKSPACE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         backquestion: backquestion {
             compatible = "zmk,behavior-mod-morph";
             label = "backquestion";
-            #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp QUESTION>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
