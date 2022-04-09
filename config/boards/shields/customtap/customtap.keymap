@@ -56,49 +56,42 @@
          spacenav: spacenav {
             compatible = "zmk,behavior-mod-morph";
             label = "spacenav";
-            #binding-cells = <0>;
             bindings = <&kp SPACE>, <&mo NAV>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };   
         cup: cup {
             compatible = "zmk,behavior-mod-morph";
             label = "cup";
-            #binding-cells = <0>;
             bindings = <&kp UP>, <&kp CUP>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
         cdown: cdown {
             compatible = "zmk,behavior-mod-morph";
             label = "cdown";
-            #binding-cells = <0>;
             bindings = <&kp DOWN>, <&kp CDOWN>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
         cleft: cleft {
             compatible = "zmk,behavior-mod-morph";
             label = "cleft";
-            #binding-cells = <0>;
             bindings = <&kp LEFT>, <&kp CLEFT>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
         cright: cright {
             compatible = "zmk,behavior-mod-morph";
             label = "cright";
-            #binding-cells = <0>;
             bindings = <&kp RIGHT>, <&kp CRIGHT>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
          backspace: backspace {
             compatible = "zmk,behavior-mod-morph";
             label = "backspace";
-            #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp BACKSPACE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };  
         backquestion: backquestion {
             compatible = "zmk,behavior-mod-morph";
             label = "backquestion";
-            #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp QUESTION>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };  
