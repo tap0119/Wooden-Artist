@@ -92,15 +92,15 @@
             compatible = "zmk,behavior-mod-morph";
             label = "back";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT>, <&kp CRIGHT>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
+            bindings = <&kp BACKSPACE>, <&kp BACKSPACE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         backquestion: backquestion {
             compatible = "zmk,behavior-mod-morph";
             label = "backquestion";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT>, <&kp CRIGHT>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
+            bindings = <&kp BACKSPACE>, <&kp QUESTION>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
     
