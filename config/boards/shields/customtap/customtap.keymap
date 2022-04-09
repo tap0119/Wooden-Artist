@@ -85,7 +85,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "bsqm";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp BACKSPACE>;
+            bindings = <&kp BACKSPACE>, <&kp QUESTION>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
