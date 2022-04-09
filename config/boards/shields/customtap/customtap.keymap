@@ -88,17 +88,10 @@
             bindings = <&kp RIGHT>, <&kp CRIGHT>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
-        backu: backu {
-            compatible = "zmk,behavior-mod-morph";
-            label = "backu";
-                        #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp BACKSPACE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
         backquestion: backquestion {
             compatible = "zmk,behavior-mod-morph";
             label = "backquestion";
-                        #binding-cells = <0>;
+            #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp QUESTION>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -114,7 +107,7 @@
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
     &kp TAB         &kp SQT   &kp COMMA   &kp DOT     &kp P      &kp Y     &kp FSLH    &kp F     &kp G      &kp C      &kp R      &kp L       &backquestion     &kp C_VOL_DN
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &backu           &kp A      &kp O       &kp E     &kp U      &kp I     &to MOUSE        &kp D     &kp H      &kp T      &kp N      &kp S     &kp MINUS     &kp ENTER
+    &kp BACKSPACE  &kp A      &kp O       &kp E     &kp U      &kp I     &to MOUSE        &kp D     &kp H      &kp T      &kp N      &kp S     &kp MINUS     &kp ENTER
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
    &kp SEMI  &mo NAV       &kp Q      &kp J     &kp K       &kp X    &kp LBKT    &kp RBKT  &kp B       &kp M     &kp W      &kp V       &kp Z      &cup     &mo NAV2   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
