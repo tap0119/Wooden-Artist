@@ -52,14 +52,7 @@
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
 
 / {    
-    behaviors {
-         spacenav: spacenav {
-            compatible = "zmk,behavior-mod-morph";
-            label = "spacenav";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp QUESTION>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };   
+    behaviors { 
         cup: cup {
             compatible = "zmk,behavior-mod-morph";
             label = "cup";
