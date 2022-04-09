@@ -104,7 +104,7 @@
         };  
         enterdel: enterdel {
             compatible = "zmk,behavior-mod-morph";
-            label = "navdel";
+            label = "enterdel";
             #binding-cells = <0>;
             bindings = <&kp ENTER>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
