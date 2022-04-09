@@ -60,6 +60,13 @@
             bindings = <&kp SPACE>, <&mo NAV>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };   
+        backquestion: backquestion {
+            compatible = "zmk,behavior-mod-morph";
+            label = "backquestion";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp QUESTION>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
         cup: cup {
             compatible = "zmk,behavior-mod-morph";
             label = "cup";
@@ -87,13 +94,6 @@
             #binding-cells = <0>;
             bindings = <&kp RIGHT>, <&kp CRIGHT>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-        backquestion: backquestion {
-            compatible = "zmk,behavior-mod-morph";
-            label = "backquestion";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp QUESTION>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
     
