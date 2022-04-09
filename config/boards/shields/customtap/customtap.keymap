@@ -88,20 +88,7 @@
             bindings = <&kp RIGHT>, <&kp CRIGHT>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
-         backspacem: backspacem {
-            compatible = "zmk,behavior-mod-morph";
-            label = "backspacem";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp BACKSPACE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };  
-        backquestion: backquestion {
-            compatible = "zmk,behavior-mod-morph";
-            label = "backquestion";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp QUESTION>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };  
+
     };
     
     keymap {
