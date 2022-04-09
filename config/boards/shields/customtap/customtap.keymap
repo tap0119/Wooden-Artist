@@ -88,7 +88,20 @@
             bindings = <&kp RIGHT>, <&kp CRIGHT>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
-
+        back: back {
+            compatible = "zmk,behavior-mod-morph";
+            label = "back";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&kp CRIGHT>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        backquestion: backquestion {
+            compatible = "zmk,behavior-mod-morph";
+            label = "backquestion";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&kp CRIGHT>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
     };
     
     keymap {
@@ -101,7 +114,7 @@
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
     &kp TAB         &kp SQT   &kp COMMA   &kp DOT     &kp P      &kp Y     &kp FSLH    &kp F     &kp G      &kp C      &kp R      &kp L       &backquestion     &kp C_VOL_DN
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &backspacem     &kp A      &kp O       &kp E     &kp U      &kp I     &to MOUSE        &kp D     &kp H      &kp T      &kp N      &kp S     &kp MINUS     &kp ENTER
+    &back           &kp A      &kp O       &kp E     &kp U      &kp I     &to MOUSE        &kp D     &kp H      &kp T      &kp N      &kp S     &kp MINUS     &kp ENTER
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
    &kp SEMI  &mo NAV       &kp Q      &kp J     &kp K       &kp X    &kp LBKT    &kp RBKT  &kp B       &kp M     &kp W      &kp V       &kp Z      &cup     &mo NAV2   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
