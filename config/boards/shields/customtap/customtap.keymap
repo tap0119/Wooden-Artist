@@ -108,6 +108,7 @@
             #binding-cells = <0>;
             bindings = <&kp ENTER>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked_mods =  <(MOD_LSFT|MOD_RSFT)>; 
         };  
     };
     
