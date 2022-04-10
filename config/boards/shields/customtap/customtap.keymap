@@ -99,7 +99,7 @@
         };
         shiftwidernav: shiftwidernav {
             compatible = "zmk,behavior-tap-dance";
-            label = "shiftnav";
+            label = "shiftwidernav";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
             bindings = <&kp RSHIFT>, <&mo WIDERNAV>;
