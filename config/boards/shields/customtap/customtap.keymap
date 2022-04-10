@@ -97,8 +97,11 @@
             tapping-term-ms = <1000>;
             bindings = <&kp RSHIFT>, <&mo NAV>;
         };
-        mtl: mtl {
+        mtl: mtl {            
+            label = "mtl";
             retro-tap;
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
             bindings = <&to>, <&kp>;
         };
     };
