@@ -109,8 +109,8 @@
             compatible = "zmk,behavior-tap-dance";
             label = "shiftnav";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp SPACE>, <&mo NAV>;
+            tapping-term-ms = <1000>;
+            bindings = <&kp RSHIFT>, <&mo NAV>;
         };
     };
     
@@ -128,7 +128,7 @@
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
    &kp SEMI    &mo NAV     &kp Q      &kp J     &kp K       &kp X    &kp LBKT    &kp RBKT        &kp B       &kp M     &kp W      &kp V       &kp Z      &cup     &tog MOUSE2   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI    &kp LALT              &shiftnav            &kp ENTER       &kp LSHIFT               &kp DEL     &mo NAV2      &cleft   &cdown    &cright
+    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE             &kp ENTER       &shiftnav              &kp DEL     &mo NAV2      &cleft   &cdown    &cright
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
@@ -206,9 +206,9 @@
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
     &trans       &trans  &trans  &trans   &trans  &trans       &trans          &trans      &trans    &trans     &trans    &trans    &trans       &trans
 //├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &kp LSHIFT  &kp LSHIFT      &trans      &trans  &trans   &trans     &trans     &trans     &trans     &trans      &trans     &trans    &trans       &trans
+    &kp LSHIFT  &kp LSHIFT      &trans      &trans           &trans   &trans     &trans     &trans      &trans     &trans      &trans     &trans    &trans       &trans
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &trans        &trans      &trans         &trans                         &trans       &mo NAV              &kp SEMI &trans            &trans    &trans       &trans
+    &trans        &trans      &trans         &trans                         &trans       &trans              &kp SEMI          &trans     &trans    &trans       &trans
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };    
