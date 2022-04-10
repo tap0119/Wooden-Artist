@@ -97,13 +97,8 @@
             tapping-term-ms = <1000>;
             bindings = <&kp RSHIFT>, <&mo NAV>;
         };
-        mtnav: mtnav {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_POSITIONAL_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
-            quick-tap-ms = <200>;
+        mt: mt {
+            retro-tap;
             bindings = <&to>, <&kp>;
         };
     };
@@ -122,7 +117,7 @@
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
    &kp SEMI    &mo NAV     &kp Q      &kp J     &kp K       &kp X    &kp LBKT    &kp RBKT        &kp B       &kp M     &kp W      &kp V       &kp Z      &cup     &tog MOUSE2   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE             &kp ENTER       &mtnav NAV RSHIFT           &mo MOUSE   &mo NAV2      &cleft   &cdown    &cright
+    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE             &kp ENTER       &mt NAV RSHIFT           &mo MOUSE   &mo NAV2      &cleft   &cdown    &cright
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
@@ -280,7 +275,7 @@
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
       &kp COLON &kp DEL &trans         &trans   &kp LPAR  &kp RPAR &kp UNDER  &none   &kp PERCENT    &kp N1     &kp N2      &kp N3     &kp EXCL      &tog GAME     &trans    
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp JOURNAL        &trans      &trans        &kp SPACE                 &to 0       &mtnav 0 RSHIFT       &kp N0    &trans  &tog QWERTY  &to 0  &tog COLEMAK 
+    &kp JOURNAL        &trans      &trans        &kp SPACE                 &to 0       &mt 0 RSHIFT       &kp N0    &trans  &tog QWERTY  &to 0  &tog COLEMAK 
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
              >;           
         };
