@@ -98,10 +98,12 @@
             bindings = <&kp RSHIFT>, <&mo NAV>;
         };
         mtl: mtl {            
-            label = "mtl";
-            retro-tap;
             compatible = "zmk,behavior-hold-tap";
+            label = "mtl";
             #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
             bindings = <&to>, <&kp>;
         };
     };
