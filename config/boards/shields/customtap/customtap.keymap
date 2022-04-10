@@ -29,6 +29,8 @@
 #define LCLICK    LG(F5)
 #define RCLICK    LG(F6)
 #define MCLICK    LG(F7)
+#define MSUP      LG(F8)
+#define MSDOWN    LG(F9)
 
 #define SEARCH    LS(F12)
 #define JOURNAL   F21
@@ -265,11 +267,11 @@
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
    &trans       &none      &none    &none     &none     &none          &none      &none    &none     &none     &none      &none       &trans         &trans   &trans 
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-    &trans          &none     &none   &kp MUP &kp RCLICK    &kp PG_UP      &none       &none       &none     &kp CUP      &none     &none     &trans          &trans 
+    &trans          &none     &none         &kp MUP &kp MSUP     &none       &none     &none     &kp PG_UP   &kp CUP      &none     &none     &trans          &trans 
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
      &trans        &kp MLEFT &kp MLEFT  &kp MDOWN   &kp MRIGHT &kp LCLICK    &tog MOUSE       &none  &kp CLEFT  &kp CDOWN &kp CRIGHT  &kp CRIGHT      &none     &trans
  //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━┻━┯━━━━━━━━┻┯━━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &none      &trans      &none      &none  &kp MCLICK   &kp PG_DN   &none     &none     &none     &none          &none     &none       &none       &trans     &trans
+    &none      &trans      &none      &none  &kp MSDOWN    &kp MCLICK     &none     &none     &kp LCTRL      &kp PG_DN      &none     &none       &none       &trans     &trans
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
     &trans        &trans      &trans         &kp LCLICK                    &kp RCLICK       &tog MOUSE            &trans     &trans       &trans     &trans     &trans
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
