@@ -280,11 +280,11 @@
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
     &kp TILDE  &kp GRAVE   &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11   &kp F12     &tog OFF
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-      &trans   &kp EXCL     &kp QUESTION &kp UP   &kp K_APP   &kp ESC      &kp PIPE    &kp DOLLAR  &kp N7    &kp N8    &kp N9      &kp N0      &kp BACKSLASH    &tog WIDER      
+      &trans       &none      &none &kp UP   &kp K_APP   &kp ESC      &kp PIPE    &kp DOLLAR  &kp N7    &kp N8    &kp N9      &kp N0      &kp BACKSLASH    &tog WIDER      
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &trans       &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER    &none          &kp MINUS    &kp N4     &kp N5      &kp N6   &kp ENTER      &kp SEARCH  &kp SEARCH  
+    &trans       &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER    &none          &kp MINUS    &kp N4     &kp N5      &kp N6   &kp QUESTION     &kp SEARCH  &kp SEARCH  
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-      &kp COLON &kp DEL &trans         &trans   &kp LPAR  &kp RPAR &kp UNDER  &none   &kp PERCENT  &kp N1     &kp N2    &kp N3    &none      &tog GAME     &trans    
+      &kp COLON &kp DEL &trans         &trans   &kp LPAR  &kp RPAR &kp UNDER  &none   &kp PERCENT    &kp N1     &kp N2      &kp N3     &kp EXCL      &tog GAME     &trans    
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
     &kp JOURNAL        &trans      &trans        &kp SPACE                 &to 0       &kp LSHIFT           &kp N0    &trans  &tog QWERTY  &to 0  &tog COLEMAK 
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
