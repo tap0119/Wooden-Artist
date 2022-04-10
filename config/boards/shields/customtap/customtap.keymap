@@ -109,7 +109,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "shiftnav";
             #binding-cells = <0>;
-            tapping-term-ms = <1000>;
+            tapping-term-ms = <200>;
             bindings = <&kp SPACE>, <&mo NAV>;
         };
     };
