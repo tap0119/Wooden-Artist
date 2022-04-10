@@ -97,6 +97,13 @@
             tapping-term-ms = <1000>;
             bindings = <&kp RSHIFT>, <&mo NAV>;
         };
+        shiftwidernav: shiftwidernav {
+            compatible = "zmk,behavior-tap-dance";
+            label = "shiftnav";
+            #binding-cells = <0>;
+            tapping-term-ms = <1000>;
+            bindings = <&kp RSHIFT>, <&mo WIDERNAV>;
+        };
         mtl: mtl {            
             compatible = "zmk,behavior-hold-tap";
             label = "mtl";
@@ -241,15 +248,15 @@
         WIDER {
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-   &kp ESC   &kp EQUAL    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5      &none      &none      &kp N6     &kp N7     &kp N8     &kp N9     &kp N0    &kp DEL   
+   &kp ESC   &kp EQUAL    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5      &none      &none         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0   &kp DEL     
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-   &kp TAB           &kp SQT    &kp COMMA   &kp DOT     &kp P      &kp Y     &trans  &kp  PSCRN    &none       &kp F     &kp G      &kp C      &kp R           &kp L      
+   &kp TAB           &kp SQT    &kp COMMA   &kp DOT     &kp P      &kp Y     &kp PSCRN        &none   &none       &kp F     &kp G      &kp C      &kp R           &kp L      
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-   &kp BSPC          &kp A     &kp O       &kp E     &kp U      &kp I      &tog MOUSE       &cup       &kp MINUS  &kp D     &kp H      &kp T      &kp N          &kp S   
+   &kp BSPC          &kp A     &kp O       &kp E     &kp U      &kp I      &none           &cup       &kp MINUS  &kp D     &kp H      &kp T      &kp N          &kp S   
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
    &kp SEMI    &mo WIDERNAV   &kp Q      &kp J     &kp K       &kp X    &none      &cleft   &cdown    &cright    &kp B       &kp M     &kp W      &kp V       &kp Z         
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI   &kp LALT             &kp SPACE                  &kp ENTER    &to 0              &mo WIDERNAV    &kp LSHIFT  &mo WIDERNAV      &kp C_VOL_UP  &kp C_VOL_DN
+    &kp LCTRL    &kp LGUI   &kp LALT             &kp SPACE                  &kp ENTER    &to 0              &kp ENTER    &shiftwidernav  &mo MOUSE   &kp C_VOL_UP  &kp C_VOL_DN
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
@@ -258,11 +265,11 @@
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
    &kp TILDE    &kp GRAVE  &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11   &kp F12    &none      
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-     &kp JOURNAL  &kp EXCL   &trans       &kp UP   &kp K_APP   &kp ESC       &kp PIPE &none        &none      &kp DOLLAR  &kp N7    &kp N8       &kp N9      &kp N0        
+     &kp JOURNAL  &kp EXCL   &trans       &kp UP   &kp K_APP   &kp ESC       &kp PIPE &none        &none      &kp DOLLAR  &kp N7    &kp N8       &kp N9      &kp QUESTION       
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &trans   &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER    &none     &none         &none      &kp MINUS    &kp N4     &kp N5      &kp N6   &kp ENTER     
+    &trans   &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER              &none     &none       &none    &kp MINUS    &kp N4     &kp N5      &kp N6   &kp N0   
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &kp COLON &kp DEL     &trans     &trans   &kp QUESTION &none     &kp UNDER  &none         &none    &kp PERCENT &kp N0     &kp N1     &kp N2    &kp N3    &none         
+    &kp COLON &kp DEL     &trans     &trans   &kp QUESTION &none     &kp UNDER  &none         &none    &none  &kp PERCENT    &kp N1     &kp N2    &kp N3    &kp EXCL        
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
    &trans      &trans       &kp LSHIFT     &kp SPACE                       &kp LSHIFT         &kp LSHIFT       &none       &none        &none      &none     &none      
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
