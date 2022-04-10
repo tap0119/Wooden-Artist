@@ -82,22 +82,7 @@
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
         
-        spacenav: spacenav {
-            compatible = "zmk,behavior-mod-morph";
-            label = "spacenav";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&mo NAV>;
-          //masked_mods =  <(MOD_RSFT)>; 
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };  
-         backspace: backspace {
-            compatible = "zmk,behavior-mod-morph";
-            label = "backspace";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp BACKSPACE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-          //masked_mods =  <(MOD_RSFT)>; 
-        };  
+
         backquestion: backquestion {
             compatible = "zmk,behavior-mod-morph";
             label = "backquestion";
@@ -112,6 +97,16 @@
             tapping-term-ms = <1000>;
             bindings = <&kp RSHIFT>, <&mo NAV>;
         };
+        mtnav: mtnav {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_POSITIONAL_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&to>;
+        };
+    };
     };
     
     keymap {
@@ -128,7 +123,7 @@
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
    &kp SEMI    &mo NAV     &kp Q      &kp J     &kp K       &kp X    &kp LBKT    &kp RBKT        &kp B       &kp M     &kp W      &kp V       &kp Z      &cup     &tog MOUSE2   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE             &kp ENTER       &shiftnav              &mo MOUSE   &mo NAV2      &cleft   &cdown    &cright
+    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE             &kp ENTER       &mtnav RSHIFT NAV           &mo MOUSE   &mo NAV2      &cleft   &cdown    &cright
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
@@ -286,7 +281,7 @@
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
       &kp COLON &kp DEL &trans         &trans   &kp LPAR  &kp RPAR &kp UNDER  &none   &kp PERCENT    &kp N1     &kp N2      &kp N3     &kp EXCL      &tog GAME     &trans    
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp JOURNAL        &trans      &trans        &kp SPACE                 &to 0       &kp LSHIFT           &kp N0    &trans  &tog QWERTY  &to 0  &tog COLEMAK 
+    &kp JOURNAL        &trans      &trans        &kp SPACE                 &to 0       &mtnav RSHIFT 0         &kp N0    &trans  &tog QWERTY  &to 0  &tog COLEMAK 
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
              >;           
         };
