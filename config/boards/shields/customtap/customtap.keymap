@@ -107,7 +107,6 @@
             bindings = <&kp>, <&to>;
         };
     };
-    };
     
     keymap {
         compatible = "zmk,keymap";
