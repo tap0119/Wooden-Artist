@@ -187,15 +187,15 @@
         GAME {
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-    &trans     &trans      &trans     &trans      &trans    &trans     &trans     &trans     &trans     &trans     &trans      &trans    &trans     &trans    &trans
+    &trans      &mo NAV     &trans     &trans      &trans    &trans     &trans     &trans     &trans     &trans     &trans      &trans    &trans     &trans    &trans
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
     &trans          &trans     &trans     &trans    &trans     &trans       &trans  &trans     &trans    &trans     &trans     &trans        &trans         &trans
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &trans       &trans  &trans  &trans   &trans  &trans       &trans          &trans      &trans    &trans     &trans    &trans    &trans       &trans
+    &trans       &trans        &trans     &trans   &trans       &trans       &trans          &trans      &trans    &trans     &trans    &trans    &trans       &trans     
 //├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &kp LSHIFT  &kp LSHIFT      &trans      &trans           &trans   &trans     &trans     &trans      &trans     &trans      &trans     &trans    &trans       &trans
+    &kp LSHIFT  &kp LSHIFT   &trans    &trans      &trans   &trans     &trans     &trans      &trans     &trans      &trans     &trans    &trans     &trans     &trans
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &trans        &trans      &trans         &trans                         &trans       &trans              &kp SEMI          &trans     &trans    &trans       &trans
+    &trans        &trans      &trans         &trans                         &trans           &trans            &trans        &trans     &trans    &trans       &trans
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };    
@@ -251,13 +251,13 @@
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
    &kp TILDE    &kp GRAVE  &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11   &kp F12    &none      
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-     &kp JOURNAL  &kp EXCL   &trans       &kp UP   &kp K_APP   &kp ESC       &kp PIPE &none        &none      &kp DOLLAR  &kp N7    &kp N8       &kp N9      &kp QUESTION       
+     &trans            &none   &none       &kp UP   &kp K_APP   &kp ESC    &kp PIPE     &none        &none      &kp DOLLAR  &kp N7    &kp N8       &kp N9      &kp QUESTION       
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &trans   &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER              &none     &none       &none    &kp MINUS    &kp N4     &kp N5      &kp N6   &kp N0   
+    &trans   &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER           &none       &none       &none    &kp MINUS    &kp N4     &kp N5      &kp N6   &kp N0   
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &kp COLON &kp DEL     &trans     &trans   &kp QUESTION &none     &kp UNDER  &none         &none    &none  &kp PERCENT    &kp N1     &kp N2    &kp N3    &kp EXCL        
+    &kp COLON &kp DEL     &kp SEMI     &kp EQUAL   &none    &kp LPAR   &kp UNDER  &none     &none  &kp PERCENT  &kp RPAR     &kp N1     &kp N2    &kp N3    &kp EXCL        
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-   &trans      &trans       &kp LSHIFT     &kp SPACE                       &kp LSHIFT         &kp LSHIFT       &none       &none        &none      &none     &none      
+   &kp JOURNAL      &trans       &kp LSHIFT     &kp SPACE                       &to 0         &kp LSHIFT       &none       &none        &none      &none     &none      
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
              >;           
         };   
@@ -283,11 +283,11 @@
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
     &kp TILDE  &kp GRAVE   &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11   &kp F12     &tog OFF
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-      &trans       &none      &none       &kp UP   &kp K_APP   &kp ESC      &kp PIPE &kp DOLLAR  &kp N7    &kp N8    &kp N9      &kp QUESTION   &kp BACKSLASH    &tog WIDER      
+      &trans       &none    &none       &kp UP   &kp K_APP   &kp ESC      &kp PIPE &kp DOLLAR  &kp N7    &kp N8    &kp N9      &kp QUESTION   &kp BACKSLASH    &tog WIDER      
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
     &trans       &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER    &none          &kp MINUS    &kp N4     &kp N5      &kp N6    &kp N0    &kp SEARCH   &kp SEARCH  
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-      &kp COLON &kp DEL &trans         &trans   &to 0    &kp LPAR   &kp UNDER  &kp PERCENT  &kp RPAR  &kp N1     &kp N2      &kp N3     &kp EXCL   &tog GAME     &trans    
+      &kp COLON &kp DEL &kp SEMI     &kp EQUAL   &none    &kp LPAR   &kp UNDER  &kp PERCENT  &kp RPAR  &kp N1     &kp N2      &kp N3     &kp EXCL   &tog GAME     &trans    
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
     &kp JOURNAL        &trans      &trans        &kp SPACE                 &to 0          &kp RSHIFT              &kp N0    &trans      &tog QWERTY  &to 0  &tog COLEMAK 
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
