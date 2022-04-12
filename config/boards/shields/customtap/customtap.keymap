@@ -88,13 +88,13 @@
             bindings = <&kp BACKSPACE>, <&kp QUESTION>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };  
-//        shiftnav: shiftnav {
-//            compatible = "zmk,behavior-tap-dance";
-//            label = "shiftnav";
-//            #binding-cells = <0>;
-//            tapping-term-ms = <1000>;
-//            bindings = <&kp RSHIFT>, <&mo NAV>;
-//        };
+        shiftnav: shiftnav {
+            compatible = "zmk,behavior-tap-dance";
+            label = "shiftnav";
+            #binding-cells = <0>;
+            tapping-term-ms = <1000>;
+            bindings = <&kp RSHIFT>, <&mo NAV>;
+        };
 //        shiftwidernav: shiftwidernav {
 //            compatible = "zmk,behavior-tap-dance";
 //            label = "shiftwidernav";
