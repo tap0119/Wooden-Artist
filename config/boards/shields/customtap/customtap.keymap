@@ -18,10 +18,10 @@
 
 
 //Mouse Movement
-#define MUP       MOVE(0,     -1200)
-#define MLEFT     MOVE(-1200, 0)
-#define MDOWN     MOVE(0,     1200) 
-#define MRIGHT    MOVE(1200,  0) 
+#define MUP       MOVE(0,     -800)
+#define MLEFT     MOVE(-800, 0)
+#define MDOWN     MOVE(0,     800) 
+#define MRIGHT    MOVE(800,  0) 
 #define MSUP      SCROLL_UP
 #define MSDOWN    SCROLL_DOWN
 
@@ -47,7 +47,7 @@
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
 
 &mmv {
-    time-to-max-speed-ms = <200>;
+    time-to-max-speed-ms = <300>;
 };
 
 / {    
