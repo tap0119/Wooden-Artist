@@ -92,29 +92,20 @@
             bindings = <&kp BACKSPACE>, <&kp QUESTION>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };  
-        shiftnav: shiftnav {
-            compatible = "zmk,behavior-tap-dance";
-            label = "shiftnav";
-            #binding-cells = <0>;
-            tapping-term-ms = <1000>;
-            bindings = <&kp RSHIFT>, <&mo NAV>;
-        };
-        shiftwidernav: shiftwidernav {
-            compatible = "zmk,behavior-tap-dance";
-            label = "shiftwidernav";
-            #binding-cells = <0>;
-            tapping-term-ms = <1000>;
-            bindings = <&kp RSHIFT>, <&mo WIDERNAV>;
-        };
-        mtl: mtl {            
-            compatible = "zmk,behavior-hold-tap";
-            label = "mtl";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "hold-preferred";
-            bindings = <&kp>, <&to>;
-        };
+//        shiftnav: shiftnav {
+//            compatible = "zmk,behavior-tap-dance";
+//            label = "shiftnav";
+//            #binding-cells = <0>;
+//            tapping-term-ms = <1000>;
+//            bindings = <&kp RSHIFT>, <&mo NAV>;
+//        };
+//        shiftwidernav: shiftwidernav {
+//            compatible = "zmk,behavior-tap-dance";
+//            label = "shiftwidernav";
+//            #binding-cells = <0>;
+//            tapping-term-ms = <1000>;
+//            bindings = <&kp RSHIFT>, <&mo WIDERNAV>;
+//        };
     };
     
     keymap {
@@ -131,7 +122,7 @@
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
    &kp SEMI    &mo NAV     &kp Q      &kp J     &kp K       &kp X    &kp LBKT    &kp RBKT        &kp B       &kp M     &kp W      &kp V       &kp Z      &cup     &tog MOUSE2   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE             &kp ENTER       &shiftnav             &mo MOUSE   &mo NAV2      &cleft   &cdown    &cright
+    &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE             &kp ENTER       &kp RSHIFT             &mo MOUSE   &mo NAV2      &cleft   &cdown    &cright
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
@@ -242,7 +233,7 @@
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
    &kp SEMI    &mo WIDERNAV   &kp Q      &kp J     &kp K       &kp X    &none      &cleft   &cdown    &cright    &kp B       &kp M     &kp W      &kp V       &kp Z         
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI   &kp LALT             &kp SPACE                  &kp ENTER    &to 0              &kp ENTER    &shiftwidernav  &mo MOUSE   &kp C_VOL_UP  &kp C_VOL_DN
+    &kp LCTRL    &kp LGUI   &kp LALT             &kp SPACE                  &kp ENTER    &to 0              &kp ENTER    &kp RSHIFT  &mo MOUSE   &kp C_VOL_UP  &kp C_VOL_DN
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
