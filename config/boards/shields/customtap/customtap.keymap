@@ -18,10 +18,10 @@
 
 
 //Mouse Movement
-#define MUP     MOVE(0,-600)
-#define MLEFT   MOVE(-600,0)
-#define MDOWN   MOVE(0,600) 
-#define MRIGHT  MOVE(600,0) 
+#define MUP       MOVE(0,     -1200)
+#define MLEFT     MOVE(-1200, 0)
+#define MDOWN     MOVE(0,     1200) 
+#define MRIGHT    MOVE(1200,  0) 
 #define LCLICK    LCLK
 #define RCLICK    RCLK
 #define MCLICK    MCLK
@@ -95,13 +95,13 @@
             tapping-term-ms = <1000>;
             bindings = <&kp RSHIFT>, <&mo NAV>;
         };
-//        shiftwidernav: shiftwidernav {
-//            compatible = "zmk,behavior-tap-dance";
-//            label = "shiftwidernav";
-//            #binding-cells = <0>;
-//            tapping-term-ms = <1000>;
-//            bindings = <&kp RSHIFT>, <&mo WIDERNAV>;
-//        };
+        shiftwidernav: shiftwidernav {
+            compatible = "zmk,behavior-tap-dance";
+            label = "shiftwidernav";
+            #binding-cells = <0>;
+            tapping-term-ms = <1000>;
+            bindings = <&kp RSHIFT>, <&mo WIDERNAV>;
+        };
     };
     
     keymap {
@@ -229,7 +229,7 @@
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
    &kp SEMI    &mo WIDERNAV   &kp Q      &kp J     &kp K       &kp X    &none      &cleft   &cdown    &cright    &kp B       &kp M     &kp W      &kp V       &kp Z         
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI   &kp LALT             &kp SPACE                  &kp ENTER    &to 0              &kp ENTER    &kp RSHIFT  &mo MOUSE   &kp C_VOL_UP  &kp C_VOL_DN
+    &kp LCTRL    &kp LGUI   &kp LALT             &kp SPACE                  &kp ENTER    &to 0              &kp ENTER    &shiftnavwider  &mo MOUSE   &kp C_VOL_UP  &kp C_VOL_DN
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
