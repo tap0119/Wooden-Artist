@@ -23,8 +23,8 @@
 #define MDOWN   MOVE(0,600) 
 #define MRIGHT  MOVE(600,0) 
 #define LCLICK    LCLK
-#define RCLICK    CLCK
-#define MCLICK    MCLCK
+#define RCLICK    RCLK
+#define MCLICK    MCLK
 #define MSUP      SCROLL_UP
 #define MSDOWN    SCROLL_DOWN
 
