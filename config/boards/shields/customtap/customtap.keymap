@@ -1,7 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h> 
 #include <dt-bindings/zmk/bt.h>
-//#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
@@ -18,19 +18,15 @@
 
 
 //Mouse Movement
-//#define MUP     MOVE(0,-600)
-//#define MLEFT   MOVE(-600,0)
-//#define MDOWN   MOVE(0,600) 
-//#define MRIGHT  MOVE(600,0) 
-#define MUP       LG(F1)
-#define MDOWN     LG(F2)
-#define MLEFT     LG(F3)
-#define MRIGHT    LG(F4)
-#define LCLICK    LG(F5)
-#define RCLICK    LG(F6)
-#define MCLICK    LG(F7)
-#define MSUP      LG(F8)
-#define MSDOWN    LG(F9)
+#define MUP     MOVE(0,-600)
+#define MLEFT   MOVE(-600,0)
+#define MDOWN   MOVE(0,600) 
+#define MRIGHT  MOVE(600,0) 
+#define LCLICK    LCLK
+#define RCLICK    CLCK
+#define MCLICK    MCLCK
+#define MSUP      SCROLL_UP
+#define MSDOWN    SCROLL_DOWN
 
 #define SEARCH    LS(F12)
 #define JOURNAL   F21
@@ -171,15 +167,15 @@
         MOUSE2 {
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-    &trans    &trans      &trans     &trans      &trans    &trans     &trans     &trans     &trans     &trans     &trans      &trans      &trans  &kp MCLICK  &kp PG_UP
+    &trans    &trans      &trans     &trans      &trans    &trans     &trans     &trans     &trans     &trans     &trans      &trans      &trans  &mkp MCLICK  &kp PG_UP
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
     &trans          &trans     &trans     &trans      &trans        &trans   &trans    &trans     &trans    &trans     &trans     &trans      &trans           &kp PG_DN
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &trans         &trans     &trans      &trans     &trans    &trans      &trans           &trans     &trans    &trans      &trans     &trans     &trans      &kp RCLICK
+    &trans         &trans     &trans      &trans     &trans    &trans      &trans           &trans     &trans    &trans      &trans     &trans     &trans      &mkp RCLICK
 //├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &trans      &trans      &trans      &trans      &trans  &trans   &trans     &trans     &trans     &trans     &trans      &trans     &trans      &kp MUP     &tog MOUSE2 
+    &trans      &trans      &trans      &trans      &trans  &trans   &trans     &trans     &trans     &trans     &trans      &trans     &trans      &mmv MUP     &tog MOUSE2 
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &trans        &trans      &trans         &trans                         &trans       &trans                 &trans     &kp LCLICK  &kp MLEFT  &kp MDOWN  &kp MRIGHT
+    &trans        &trans      &trans         &trans                         &trans       &trans                 &trans     &mkp LCLICK  &mmv MLEFT  &mmv MDOWN  &mmv MRIGHT
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
@@ -267,13 +263,13 @@
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
    &trans       &none      &none    &none     &none     &none          &none      &none    &none     &none     &none      &none       &trans         &trans   &trans 
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-    &trans          &none     &none         &kp MUP &kp MSUP     &none       &none     &none     &kp PG_UP   &kp CUP      &none     &none     &trans          &trans 
+    &trans          &none     &none         &mmv MUP &mwh MSUP     &none       &none     &none     &kp PG_UP   &kp CUP      &none     &none     &trans          &trans 
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-     &trans        &kp MLEFT &kp MLEFT  &kp MDOWN   &kp MRIGHT &kp LCLICK    &tog MOUSE       &none  &kp CLEFT  &kp CDOWN &kp CRIGHT  &kp CRIGHT      &none     &trans
+     &trans        &mmv MLEFT &mmv MLEFT  &mmv MDOWN   &mmv MRIGHT &mkp LCLICK    &tog MOUSE       &none  &kp CLEFT  &kp CDOWN &kp CRIGHT  &kp CRIGHT      &none     &trans
  //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━┻━┯━━━━━━━━┻┯━━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &none      &trans      &none      &none  &kp MSDOWN    &kp MCLICK     &none     &none     &kp LCTRL      &kp PG_DN      &none     &none       &none       &trans     &trans
+    &none      &trans      &none      &none  &mwh MSDOWN    &mkp MCLICK     &none     &none  &kp LCTRL   &kp PG_DN      &none     &none       &none       &trans     &trans
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &trans        &trans      &trans         &kp LCLICK                    &kp RCLICK       &tog MOUSE            &trans     &trans       &trans     &trans     &trans
+    &trans        &trans      &trans         &mkp LCLICK                    &mkp RCLICK       &tog MOUSE            &trans     &trans       &trans     &trans     &trans
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
                >;
         };
