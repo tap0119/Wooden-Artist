@@ -107,9 +107,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "spacenav";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <200>;
-            flavor = "hold-preferred";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
     };
@@ -130,7 +130,7 @@
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
    &kp SEMI    &mo NAV     &kp Q      &kp J     &kp K       &kp X    &kp LBKT    &kp RBKT        &kp B       &kp M     &kp W      &kp V       &kp Z    &cup    &tog MOUSE2   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp LCTRL    &kp LGUI    &kp LALT          &spacenav NAV SPACE            &kp ENTER       &kp RSHIFT          &mo MOUSE   &mo NAV2      &cleft   &cdown    &cright
+    &kp LCTRL    &kp LGUI    &kp LALT          &kp      SPACE            &kp ENTER       &kp RSHIFT          &mo MOUSE   &mo NAV2      &cleft   &cdown    &cright
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
         };
