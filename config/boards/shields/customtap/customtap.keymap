@@ -14,6 +14,7 @@
 #define WIDERNAV 7
 #define MOUSE   8
 #define NAV     9
+#define NAV231  10
 
 
 //Mouse Movement
