@@ -13,7 +13,7 @@
 #define WIDER   6
 #define WIDERNAV 7
 #define MOUSE   8
-#define NAV     
+#define NAV     9
 
 
 //Mouse Movement
