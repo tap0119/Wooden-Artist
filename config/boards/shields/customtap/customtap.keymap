@@ -5,15 +5,16 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define QWERTY  1
-#define MOUSE2  2
-#define GAME    3
-#define NAV2    4
-#define OFF     5
-#define WIDER   6
-#define WIDERNAV 7
-#define MOUSE   8
-#define NAV     9
+#define COLEMAK 1
+#define QWERTY  2
+#define MOUSE2  3
+#define GAME    4
+#define NAV2    5
+#define OFF     6
+#define WIDER   7
+#define WIDERNAV 8
+#define MOUSE   9
+#define NAV     10
 
 
 //Mouse Movement
@@ -125,7 +126,7 @@
     &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE             &kp ENTER       &mk RSHIFT BACKSPACE   &mo MOUSE       &mo NAV2      &cleft   &cdown    &cright
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
-        };
+        };  
            
        QWERTY{
            bindings = <
