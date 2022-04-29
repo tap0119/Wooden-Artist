@@ -47,7 +47,9 @@
 &mmv {
     time-to-max-speed-ms = <300>;
 };
-
+&mt {
+     retro-tap;
+};
 / {    
     behaviors { 
         cup: cup {
@@ -104,9 +106,6 @@
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
-         };
-         &mt {
-           retro-tap;
          };
     };
     
