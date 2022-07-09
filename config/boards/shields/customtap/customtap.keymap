@@ -85,8 +85,6 @@
             bindings = <&kp LCTRL>, <&kp JOURNAL>;
             mods = <(MOD_RSFT)>;
         };
-        
-
         backquestion: backquestion {
             compatible = "zmk,behavior-mod-morph";
             label = "backquestion";
@@ -172,7 +170,7 @@
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
     &trans          &trans     &trans     &trans    &trans     &trans       &to 0  &trans     &trans    &trans     &trans     &trans        &trans         &trans
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &kp LSHIFT  &trans        &trans     &trans   &trans       &trans       &trans          &trans      &trans    &trans     &trans    &trans    &trans       &trans     
+    &kp RSHIFT  &trans        &trans     &trans   &trans       &trans       &trans          &trans      &trans    &trans     &trans    &trans    &trans       &trans     
 //├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
     &kp LSHIFT  &kp LSHIFT   &trans    &trans      &trans   &trans     &trans     &trans      &trans     &trans      &trans     &trans    &trans     &trans     &trans
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
@@ -264,13 +262,13 @@
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
     &kp TILDE     &kp F1     &kp F2     &kp F3     &kp F4     &kp F5  &kp GRAVE    &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11   &kp F12     &tog OFF
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
-      &trans       &none    &none       &kp UP   &kp K_APP   &kp ESC      &kp PIPE &kp DOLLAR  &kp N7    &kp N8    &kp N9      &kp QUESTION   &kp BACKSLASH    &none      
+      &trans       &none    &none       &kp UP   &kp K_APP   &kp ESC      &kp PIPE &kp DOLLAR  &kp N7    &kp N8    &kp N9      &kp QUESTION   &kp BACKSLASH    &tog WIDER       
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
     &trans       &kp LEFT    &kp LEFT   &kp DOWN   &kp RIGHT  &kp ENTER    &to 0          &kp MINUS    &kp N4     &kp N5      &kp N6    &kp N0    &kp SEARCH   &kp SEARCH  
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
       &kp COLON &kp DEL &kp SEMI     &kp EQUAL   &kp SPACE &kp LPAR   &kp UNDER  &kp PERCENT  &kp RPAR  &kp N1     &kp N2      &kp N3     &kp EXCL   &tog GAME     &trans    
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
-    &kp JOURNAL        &trans      &trans        &kp SPACE                 &kp ENTER         &none              &kp N0    &trans      &tog QWERTY  &to 0  &tog WIDER 
+    &kp JOURNAL        &trans      &trans        &kp SPACE                 &kp ENTER         &none              &kp N0    &trans       &none        &to 0     &tog QWERTY  
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
              >;           
         };
