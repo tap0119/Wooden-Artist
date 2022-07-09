@@ -161,11 +161,11 @@
         GAME {
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-    &trans      &mo NAV     &trans     &trans      &trans    &trans     &trans     &trans     &trans     &trans     &trans      &trans    &trans     &trans    &trans
+    &trans      &trans     &trans     &trans      &trans    &trans     &trans     &trans     &trans     &trans     &trans      &trans    &trans     &trans    &trans
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
     &trans          &trans     &trans     &trans    &trans     &trans       &to 0  &trans     &trans    &trans     &trans     &trans        &trans         &trans
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &kp LSHIFT       &trans        &trans     &trans   &trans       &trans       &trans          &trans      &trans    &trans     &trans    &trans    &trans       &trans     
+    &kp RSHIFT       &trans        &trans     &trans   &trans       &trans       &trans          &trans      &trans    &trans     &trans    &trans    &trans       &trans     
 //├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
     &kp LSHIFT  &kp LSHIFT   &trans    &trans      &trans   &trans     &trans     &trans      &trans     &trans      &trans     &trans    &trans     &trans     &trans
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
