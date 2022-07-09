@@ -78,6 +78,14 @@
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
         
+        ctrljournal: ctrljournal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ctrljournal";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&kp JOURNAL>;
+            mods = <(MOD_RSHIFT)>;
+        };
+        
 
         backquestion: backquestion {
             compatible = "zmk,behavior-mod-morph";
@@ -118,7 +126,7 @@
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
     &kp BACKSPACE  &kp A      &kp O       &kp E  &hm RSHIFT U      &kp I         &kp BSLH    &kp D     &hm RSHIFT H      &kp T      &kp N      &kp S     &kp MINUS     &kp ENTER
 //├──────────┬──┺━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-     &kp SEMI &kp RSHIFT     &kp Q      &kp J     &kp K       &kp X    &kp LBKT    &kp RBKT  &kp B       &kp M     &kp W      &kp V       &kp Z      &cup     &kp RCTRL   
+     &kp SEMI &kp LSHIFT     &kp Q      &kp J     &kp K       &kp X    &kp LBKT    &kp RBKT  &kp B       &kp M     &kp W      &kp V       &kp Z      &cup     &kp RCTRL   
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
     &kp LCTRL    &kp LGUI    &kp LALT              &kp SPACE             &kp ENTER       &mk NAV BACKSPACE    &mo MOUSE       &mo NAV2      &cleft   &cdown    &cright
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
