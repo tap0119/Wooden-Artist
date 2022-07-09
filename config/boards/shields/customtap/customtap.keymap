@@ -83,7 +83,7 @@
             label = "ctrljournal";
             #binding-cells = <0>;
             bindings = <&kp LCTRL>, <&kp JOURNAL>;
-            mods = <(MOD_RSHIFT)>;
+            mods = <(MOD_RSFT)>;
         };
         
 
