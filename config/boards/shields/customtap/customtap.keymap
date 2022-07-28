@@ -8,12 +8,13 @@
 #define QWERTY  1
 #define MOUSE2  2
 #define GAME    3
-#define NAV2    4
-#define OFF     5
-#define WIDER   6
-#define WIDERNAV 7
-#define MOUSE   8
-#define NAV     9
+#define GAME2   4
+#define NAV2    5
+#define OFF     6
+#define WIDER   7
+#define WIDERNAV 8
+#define MOUSE   9
+#define NAV     10
 
 //Mouse Movement
 #define MUP       MOVE(0,     -800)
@@ -166,18 +167,34 @@
     GAME {
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-    &trans     &trans      &trans     &trans      &trans    &trans     &mo NAV     &trans     &trans     &trans     &trans      &trans    &trans     &trans    &trans
+    &trans     &none      &none     &none      &none       &none      &mo NAV     &trans     &trans     &trans     &trans      &trans    &trans     &trans    &trans
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
     &trans          &trans     &trans     &trans    &trans     &trans       &to 0  &trans     &trans    &trans     &trans     &trans        &trans         &trans
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &kp RSHIFT  &trans        &trans     &trans   &trans       &trans       &trans          &trans      &trans    &trans     &trans    &trans    &trans       &trans     
+    &trans         &trans        &trans     &trans   &trans       &trans       &trans          &trans      &trans    &trans     &trans    &trans    &trans       &trans     
 //├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
-    &kp LSHIFT  &kp LSHIFT   &trans    &trans      &trans   &trans     &trans     &trans      &trans     &trans      &trans     &trans    &trans     &trans     &trans
+    &trans      &trans      &trans    &trans      &trans   &trans     &trans     &trans      &trans     &trans      &trans     &trans    &trans     &trans     &trans
+//├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
+    &trans        &trans      &mo GAME2      &trans                         &trans           &trans            &trans        &trans     &trans    &trans       &trans
+//╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
+            >;
+        };    
+        
+            GAME2 {
+           bindings = <
+//╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
+    &trans     &trans      &trans     &trans      &trans    &trans     &mo NAV     &trans     &trans     &trans     &trans      &trans    &trans     &trans    &trans
+//├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
+    &trans          &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &to 0  &trans     &trans    &trans     &trans     &trans        &trans         &trans
+//├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
+    &trans        &trans        &trans     &trans   &trans       &trans       &trans          &trans      &trans    &trans     &trans    &trans    &trans       &trans     
+//├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
+    &trans     &trans      &trans    &trans      &trans   &trans     &trans     &trans      &trans     &trans      &trans     &trans    &trans     &trans     &trans
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
     &trans        &trans      &trans         &trans                         &trans           &trans            &trans        &trans     &trans    &trans       &trans
 //╰─────────────┴─────────┴─────────────┴───────────────────────────────┴──────────────┴─────────────────────┴──────────┴─────────────┴──────────┴──────────┴──────────────╯
             >;
-        };    
+        };   
         
         NAV2 {
            bindings = <
