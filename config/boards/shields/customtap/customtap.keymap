@@ -182,11 +182,11 @@
         NAV2 {
            bindings = <
 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────────╮
-&bootloader &reset &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3 &trans     &trans     &trans     &trans     &trans      &trans    &trans     &trans    &kp PG_UP
+    &reset &bt BT_SEL 0 &bt BT_SEL 1&bt BT_SEL 2 &bt BT_SEL 3    &trans  &trans     &trans     &trans     &trans     &trans      &trans    &trans     &trans    &kp PG_UP
 //├──────────┴────┬──────┴───┬──────┴───┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴────┬─────┴──────────┼──────────────┤
     &out OUT_TOG         &trans     &trans     &trans    &trans     &trans  &trans    &trans      &kp AMPS  &kp STAR   &trans       &trans        &trans       &kp PG_DN
 //├─────────────┲━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┳━┷━━━━━━━━┱─┴────────┬─┴──────────┴───┬──────┴───┲━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┳━━━━━━┷━━━┱──────────┬─┴──────────────┤
-    &trans       &trans      &trans      &trans   &trans      &none      &trans         &none      &kp DOLLAR  &kp PERCENT &kp CARET    &trans     &trans      &trans
+     &bootloader   &trans      &trans      &trans   &trans      &none      &trans         &none      &kp DOLLAR  &kp PERCENT &kp CARET    &trans     &trans      &trans
 //├──────────┬──┺━━━━━━━━┯━┻━━━━━━━┯━━┻━━━━━━━┯━━┻━━━━━━━┯━━┹───────┬──┴───────┬────────┴─┬────────┺━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┻━┯━━━━━━━━┹─┬────────┴─┬──────────────┤
     &trans     &trans      &trans      &trans      &trans  &trans   &trans     &trans     &trans      &kp EXCL    &kp AT     &kp HASH     &trans    &kp CUP   &tog MOUSE2
 //├──────────┴──┬───────┴─┬────────┴────┬─────┴──────────┴──────────┴───┬──────┴───────┬──┴──────────┴───────┬──┴───────┬──┴──────────┼──────────┼──────────┼──────────────┤
