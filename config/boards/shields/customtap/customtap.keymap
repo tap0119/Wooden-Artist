@@ -12,7 +12,7 @@
 #define NAV     5
 #define TOGGLE  6
 
-//Mouse Movement
+//Mouse Movement   
 #define MUP       MOVE(0,     -800)
 #define MLEFT     MOVE(-800, 0)
 #define MDOWN     MOVE(0,     800) 
