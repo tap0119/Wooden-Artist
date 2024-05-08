@@ -25,7 +25,7 @@
             , <&pro_micro 16 GPIO_ACTIVE_HIGH>   // col orange
             , <&pro_micro 7 GPIO_ACTIVE_HIGH>  // col yellow
             , <&gpio1 2 GPIO_ACTIVE_HIGH>      // col green
-            , <&pro_micro 22 GPIO_ACTIVE_HIGH>     // col 5 puprle
+            , <&pro_micro 4 GPIO_ACTIVE_HIGH>     // col 5 puprle
             , <&gpio1 7 GPIO_ACTIVE_HIGH>    // col 6 blue
             , <&pro_micro 19 GPIO_ACTIVE_HIGH>    // col 7 green
             , <&pro_micro 9 GPIO_ACTIVE_HIGH>      // col 8 yellow
